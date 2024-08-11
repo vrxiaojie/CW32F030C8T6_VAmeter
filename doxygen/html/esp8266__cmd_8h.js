@@ -5,13 +5,9 @@ var esp8266__cmd_8h =
     [ "ESP8266_Clear", "esp8266__cmd_8h.html#a846bd3892ad76a2e0589298e6026a2eb", null ],
     [ "ESP8266_Reset", "esp8266__cmd_8h.html#aa9414a328d6e95d451bd1f36f1923f01", null ],
     [ "ESP8266_SendCmd", "esp8266__cmd_8h.html#a35a39c8502757158d77a6d0ee1936f03", null ],
-    [ "ESP8266_SendData", "esp8266__cmd_8h.html#a321c44bed0a4a78fe08b1c29f219eeaa", null ],
     [ "Network_info", "esp8266__cmd_8h.html#a9d50fa093114c0e9a46a9a4b4ff19b2c", null ],
     [ "USART_SendString", "esp8266__cmd_8h.html#a2194529694ce26bd9913f172f05c7fed", null ],
     [ "esp8266_buf", "esp8266__cmd_8h.html#ad9302b4cc0c4b53641111fd11dbd2d91", null ],
-    [ "esp8266_cnt", "esp8266__cmd_8h.html#a46779094a9b514543c062c20c0add650", null ],
-    [ "esp8266_cntPre", "esp8266__cmd_8h.html#a79aab3df1133da471fbe7182d450fc52", null ],
-    [ "ESP8266_Last_Status", "esp8266__cmd_8h.html#ab5366a070db023d896628ce58bd5504a", null ],
     [ "ESP8266_Status", "esp8266__cmd_8h.html#aa85d9700d50398afe1fb183a196a597b", null ],
     [ "WIFI_Status", "esp8266__cmd_8h.html#a59269537e7e881ed8f608c3f7a5de4c1", null ]
 ];

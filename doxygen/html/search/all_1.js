@@ -3,17 +3,10 @@ var searchData=
   ['bat_5fcnt_0',['bat_cnt',['../tim_8c.html#adec65c7610965cba8a92984da28d756d',1,'bat_cnt:&#160;tim.c'],['../tim_8h.html#adec65c7610965cba8a92984da28d756d',1,'bat_cnt:&#160;tim.c']]],
   ['bat_5fvol_5fpin_1',['BAT_VOL_PIN',['../adc_8h.html#ab9250ae6d3e145b04244aa2afd7c6145',1,'adc.h']]],
   ['bat_5fvol_5fpin_5fport_2',['BAT_VOL_PIN_PORT',['../adc_8h.html#a58979d597f41374a663ba47bcc177128',1,'adc.h']]],
-  ['bat_5fvolume_3',['bat_volume',['../adc_8c.html#af2db3d565788f3d56f44a37a4fe1384d',1,'adc.c']]],
-  ['battery_5fvolume_4',['Battery_Volume',['../adc_8c.html#a76838c794b3f9eeb26f5d8407029747d',1,'Battery_Volume(void):&#160;adc.c'],['../adc_8h.html#a76838c794b3f9eeb26f5d8407029747d',1,'Battery_Volume(void):&#160;adc.c']]],
-  ['black_5',['BLACK',['../_lcd___driver_8h.html#a7b3b25cba33b07c303f3060fe41887f6',1,'Lcd_Driver.h']]],
-  ['blue_6',['BLUE',['../_lcd___driver_8h.html#a79d10e672abb49ad63eeaa8aaef57c38',1,'Lcd_Driver.h']]],
-  ['bred_7',['BRED',['../_lcd___driver_8h.html#a2adb4c9e293ac446897ccfac5a52d6c2',1,'Lcd_Driver.h']]],
-  ['brightness_5fsetup_8',['Brightness_Setup',['../sys_8c.html#a38aeaefbe0560ef1039fcc20eb624497',1,'Brightness_Setup():&#160;sys.c'],['../sys_8h.html#a515459c7cf407829883f3d6b52e6c2dc',1,'Brightness_Setup(void):&#160;sys.c']]],
-  ['brown_9',['BROWN',['../_lcd___driver_8h.html#ab2baea56ece91306020afd6d77fd19f9',1,'Lcd_Driver.h']]],
-  ['brred_10',['BRRED',['../_lcd___driver_8h.html#a7a180e479d5885267c5cf68bda4ba51a',1,'Lcd_Driver.h']]],
-  ['btim1_5finit_11',['BTIM1_Init',['../tim_8c.html#afa607bc783fc6cfc8c57272c204ef52c',1,'BTIM1_Init(void):&#160;tim.c'],['../tim_8h.html#afa607bc783fc6cfc8c57272c204ef52c',1,'BTIM1_Init(void):&#160;tim.c']]],
-  ['btim1_5firqhandler_12',['BTIM1_IRQHandler',['../tim_8c.html#a17b63163c44cc0cea4037eb215b258b7',1,'BTIM1_IRQHandler(void):&#160;tim.c'],['../tim_8h.html#a17b63163c44cc0cea4037eb215b258b7',1,'BTIM1_IRQHandler(void):&#160;tim.c']]],
-  ['btim2_5finit_13',['BTIM2_Init',['../tim_8c.html#a032d313c44a92a528d4f8c8fcb5622cb',1,'BTIM2_Init(void):&#160;tim.c'],['../tim_8h.html#a032d313c44a92a528d4f8c8fcb5622cb',1,'BTIM2_Init(void):&#160;tim.c']]],
-  ['btim2_5firqhandler_14',['BTIM2_IRQHandler',['../tim_8c.html#ae20b90edd9900e630d428f9345b793a8',1,'BTIM2_IRQHandler(void):&#160;tim.c'],['../tim_8h.html#ae20b90edd9900e630d428f9345b793a8',1,'BTIM2_IRQHandler(void):&#160;tim.c']]],
-  ['buffer_15',['buffer',['../str_8c.html#a4978709ac6b4c8810f91f5ed81cac40e',1,'str.c']]]
+  ['battery_5fvolume_3',['Battery_Volume',['../adc_8c.html#a76838c794b3f9eeb26f5d8407029747d',1,'Battery_Volume(void):&#160;adc.c'],['../adc_8h.html#a76838c794b3f9eeb26f5d8407029747d',1,'Battery_Volume(void):&#160;adc.c']]],
+  ['brightness_5fsetup_4',['Brightness_Setup',['../sys_8c.html#a38aeaefbe0560ef1039fcc20eb624497',1,'Brightness_Setup():&#160;sys.c'],['../sys_8h.html#a515459c7cf407829883f3d6b52e6c2dc',1,'Brightness_Setup(void):&#160;sys.c']]],
+  ['btim1_5finit_5',['BTIM1_Init',['../tim_8c.html#afa607bc783fc6cfc8c57272c204ef52c',1,'BTIM1_Init(void):&#160;tim.c'],['../tim_8h.html#afa607bc783fc6cfc8c57272c204ef52c',1,'BTIM1_Init(void):&#160;tim.c']]],
+  ['btim1_5firqhandler_6',['BTIM1_IRQHandler',['../tim_8c.html#a17b63163c44cc0cea4037eb215b258b7',1,'BTIM1_IRQHandler(void):&#160;tim.c'],['../tim_8h.html#a17b63163c44cc0cea4037eb215b258b7',1,'BTIM1_IRQHandler(void):&#160;tim.c']]],
+  ['btim2_5finit_7',['BTIM2_Init',['../tim_8c.html#a032d313c44a92a528d4f8c8fcb5622cb',1,'BTIM2_Init(void):&#160;tim.c'],['../tim_8h.html#a032d313c44a92a528d4f8c8fcb5622cb',1,'BTIM2_Init(void):&#160;tim.c']]],
+  ['btim2_5firqhandler_8',['BTIM2_IRQHandler',['../tim_8c.html#ae20b90edd9900e630d428f9345b793a8',1,'BTIM2_IRQHandler(void):&#160;tim.c'],['../tim_8h.html#ae20b90edd9900e630d428f9345b793a8',1,'BTIM2_IRQHandler(void):&#160;tim.c']]]
 ];
