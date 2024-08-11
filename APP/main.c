@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         main.c
 * @brief		主函数
@@ -33,116 +32,6 @@ int32_t main(void)
     //上电后设ESP8266为无 Wi-Fi 模式，关闭自动连接WIFI（省电）
     USART_SendString(CW_UART1,(uint8_t*)"AT+CWMODE=0,0\r\n");
     Show_Main_Menu();	//显示主菜单
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
-
-#include "main.h"
-
-//初始化按键状态变量
-uint16_t key_pin[5] = {UP_KEY_PIN,DOWN_KEY_PIN,LEFT_KEY_PIN,RIGHT_KEY_PIN,CONFIRM_KEY_PIN};
-GPIO_TypeDef* key_pin_port[5] = {UP_KEY_PORT,DOWN_KEY_PORT,LEFT_KEY_PORT,RIGHT_KEY_PORT,CONFIRM_KEY_PORT};
-uint8_t key_status[5]={0,0,0,0,0};
-uint8_t key_flag[5]={0,0,0,0,0};
-
-//初始化ESP8266状态标识变量（ESP8266是否开机、是否连接到CW32）
-uint8_t ESP8266_Status = 0;
-uint8_t ESP8266_Last_Status = 0;
-
-
-/**************************************************************************************
-	函数名称：	GPIOA_IRQHandler
-
-	函数功能：	GPIOA中断处理函数
-
-	入口参数：	无
-
-	返回参数：	无
-**************************************************************************************/
-void GPIOA_IRQHandler(void)
-{
-    if(CW_GPIOA->ISR_f.PIN10)
-
-    {
-        GPIOA_INTFLAG_CLR(bv10);//清除CW_GPIO中断标志
-    }
-
-}
-
-/**************************************************************************************
-	函数名称：	GPIO_User_Init
-
-	函数功能：	初始化用户定义的GPIO端口
-
-	入口参数：	无
-
-	返回参数：	无
-**************************************************************************************/
-void GPIO_User_Init()
-{
-    GPIO_InitTypeDef	GPIO_InitStruct; // GPIO初始化结构体
-
-    __RCC_GPIOA_CLK_ENABLE();// 使能GPIO时钟
-    __RCC_GPIOB_CLK_ENABLE();
-    __RCC_GPIOC_CLK_ENABLE();
-
-    GPIO_InitStruct.Pins = ESP8266_EN_PIN;			// PB14作为ESP8266的启停开关
-    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;		//推挽输出
-    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;		// 输出速度高
-    GPIO_Init(ESP8266_EN_PORT, &GPIO_InitStruct);			// 初始化
-
-    GPIO_WritePin(ESP8266_EN_PORT,ESP8266_EN_PIN,GPIO_Pin_RESET); //默认关闭ESP8266
-
-    GPIO_InitStruct.Pins = ESP8266_PIN;				// PB15作为检测ESP8266状态的引脚
-    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;			//浮空输入
-    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;		// 输出速度高
-    GPIO_Init(ESP8266_PORT, &GPIO_InitStruct);		// 初始化
-	
-	GPIO_InitStruct.Pins = GPIO_PIN_13;				// PB13作为LDO的启停开关
-    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;		//推挽输出
-    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;		// 输出速度高
-    GPIO_Init(CW_GPIOB, &GPIO_InitStruct);			// 初始化
-	GPIO_WritePin(CW_GPIOB,GPIO_PIN_13,GPIO_Pin_SET);  //默认开启LDO
-	
-	GPIO_InitStruct.Pins = SCL_PIN|SDA_PIN;
-	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
-	GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-	GPIO_Init(CW_GPIOA, &GPIO_InitStruct);
-}
-
-
-/**************************************************************************************
-	函数名称：	main
-
-	函数功能：	程序主函数
-
-	入口参数：	无
-
-	返回参数：	无
-**************************************************************************************/
-int32_t main(void)
-{
-    board_init();	// 开发板初始化
-
-    //屏幕初始化
-    Lcd_Init();  //初始化LCD屏
-    Lcd_Clear(BLACK);
-
-    uart1_init(115200);	// 串口1波特率115200
-    GPIO_User_Init(); //GPIO初始化
-    BTIM1_Init();
-    BTIM2_Init();
-	GTIM3_PWM_Init();
-    Key_Init();
-    //上电后设ESP8266为无 Wi-Fi 模式，关闭自动连接WIFI（省电）
-    USART_SendString(CW_UART1,(uint8_t*)"AT+CWMODE=0,0\r\n");
-    Show_Main_Menu();
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 
     while(1)
     {	
@@ -191,11 +80,7 @@ int32_t main(void)
 				break;
 		}
 		}
-<<<<<<< HEAD
 		//操作符在次级菜单
-=======
-		//操作符在子菜单
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 		else if(in_sub_menu_flag == 1 && in_progress_flag ==0)
 		{
 			switch(btn){
@@ -238,11 +123,7 @@ int32_t main(void)
 			in_progress_flag = 0;
 		}
 		
-<<<<<<< HEAD
 		//若ESP8266状态发生变化则执行操作
-=======
-		//若ESP8266状态发生变化
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 		if(ESP8266_Last_Status!=ESP8266_Status && in_progress_flag == 0)
 		{
 			ESP8266_Last_Status=ESP8266_Status;

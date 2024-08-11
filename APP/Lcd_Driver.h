@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         Lcd_Driver.h
 * @brief		LCD屏幕驱动头文件
@@ -8,15 +7,6 @@
 * @note 	 	哔哩哔哩	:		VR小杰		https://space.bilibili.com/11526854 <br>
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
  
 #ifndef LCD_DRIVER_H_
 #define LCD_DRIVER_H_
@@ -95,7 +85,6 @@
 	LCD_WR_SET;\
 	LCD_CS_SET;\
 	} 
-<<<<<<< HEAD
 	
 	//竖屏
 	//#define X_MAX_PIXEL	        128
@@ -105,9 +94,6 @@
 	#define X_MAX_PIXEL	        160
 	#define Y_MAX_PIXEL	        128
 
-=======
-		
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 
 
 	void LCD_GPIO_Init(void);
@@ -120,11 +106,7 @@
 	void Lcd_Clear(uint16_t Color);
 	void Lcd_SetXY(uint16_t x,uint16_t y);
 	void Gui_DrawPoint(uint16_t x,uint16_t y,uint16_t Data);
-<<<<<<< HEAD
 	uint32_t Lcd_ReadPoint(uint16_t x,uint16_t y);
-=======
-	unsigned int Lcd_ReadPoint(uint16_t x,uint16_t y);
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 	void Lcd_SetRegion(uint16_t x_start,uint16_t y_start,uint16_t x_end,uint16_t y_end);
 	void LCD_WriteData_16Bit(uint16_t Data);
 	void Lcd_Part_Clear(uint8_t x1,uint8_t y1,uint8_t x2,uint8_t y2,uint16_t Color);

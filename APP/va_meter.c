@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         va_meter.c
 * @brief		电压电流表相关操作的源文件
@@ -9,31 +8,17 @@
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
 
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #include "va_meter.h"
 #include <math.h>
 #include <stdlib.h>
 #include "menu.h"
 
-<<<<<<< HEAD
 uint8_t va_meter_style; ///<显示样式选择：0 - 图形模式  1 - 纯数字模式
-=======
-uint8_t va_meter_style=5; //显示样式选择：0 - 图形模式  1 - 纯数字模式
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 uint8_t time=2,last_time,last_voltage_value;
 
 short voltage_num[5]= {0};
 short current_num[5]= {0};
 double voltage_value = 0,current_value=0;
-<<<<<<< HEAD
 #define MAX_VOLTAGE_Y 6 ///<电压纵坐标最大值6V
 #define MAX_CURRENT_Y 1000  ///<电流纵坐标最大值1000mA
 
@@ -43,20 +28,6 @@ double voltage_value = 0,current_value=0;
 * @return		无
 */
 
-=======
-#define MAX_VOLTAGE_Y 6 //电压纵坐标最大值6V
-#define MAX_CURRENT_Y 1000  //电流纵坐标最大值1000mA
-
-/**************************************************************************************
-	函数名称：	Draw_Value_Line
-
-	函数功能：	绘制电压曲线、电流柱形图
-
-	入口参数：	无
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Draw_Value_Line()
 {
     if(time==158)
@@ -90,24 +61,12 @@ void Draw_Value_Line()
     last_time = time;
 }
 
-<<<<<<< HEAD
 /**
 * @brief		启动电压电流表
 * @param		idx 0为图形模式；1为数字模式
 * @return		无
 */
 
-=======
-/**************************************************************************************
-	函数名称：	Launch_VA_Meter
-
-	函数功能：	启动电压电流表
-
-	入口参数：	idx——0为图形模式；1为数字模式
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Launch_VA_Meter(uint8_t idx)
 {
     Lcd_Clear(BLACK);
@@ -220,7 +179,6 @@ void Launch_VA_Meter(uint8_t idx)
 	key_flag[2]=0;
 }
 
-<<<<<<< HEAD
 /**
 * @brief		电压电流表发送数据到MQTT消息队列
 * @param		volt 电压值
@@ -228,18 +186,6 @@ void Launch_VA_Meter(uint8_t idx)
 * @return		无
 */
 
-=======
-/**************************************************************************************
-	函数名称：	VAmeter_Mqtt_Send_Data
-
-	函数功能：	电压电流表发送数据到MQTT消息队列
-
-	入口参数：	volt——电压值
-				curr——电流值
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void VAmeter_Mqtt_Send_Data(double volt,double curr)
 {
 	if(mqtt_status == 0)

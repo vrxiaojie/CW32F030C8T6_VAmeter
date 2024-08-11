@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         GUI.c
 * @brief		GUI绘制相关源文件
@@ -8,22 +7,12 @@
 * @note 	 	哔哩哔哩	:		VR小杰		https://space.bilibili.com/11526854 <br>
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
  
 #include "GUI.h"
 #include "Lcd_Driver.h"
 #include "Font.h"
 #include "Picture.h"
 
-<<<<<<< HEAD
 /**
 * @brief		画线函数，使用Bresenham 画线算法
 * @param		x0 第一个点的横坐标
@@ -32,21 +21,6 @@
 * @param		y1 第二个点的纵坐标
 * @return		无
 */
-=======
-/**************************************************************************************
-	函数名称：	Gui_DrawLine
-
-	函数功能：	画线函数，使用Bresenham 画线算法
-
-	入口参数：	x0——第一个点的横坐标
-				y0——第一个点的纵坐标
-				x1——第二个点的横坐标
-				y1——第二个点的纵坐标
-				Color——颜色
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Gui_DrawLine(uint16_t x0, uint16_t y0,uint16_t x1, uint16_t y1,uint16_t Color)   
 {
 int dx,             // difference in x's
@@ -143,7 +117,6 @@ int dx,             // difference in x's
 }
 
 
-<<<<<<< HEAD
 
 /**
 * @brief		绘制GBK编码高16像素、宽8像素的英文、字符、数字；汉字的高、宽均为16像素
@@ -154,21 +127,6 @@ int dx,             // difference in x's
 * @param		s 要绘制的字符
 * @return		无
 */
-=======
-/**************************************************************************************
-	函数名称：	Gui_DrawFont_GBK16
-
-	函数功能：	绘制GBK编码长宽为16像素的英文、字符、汉字
-
-	入口参数：	x——该字的左上角横坐标
-				y——该字的左上角纵坐标
-				fc——字的颜色
-				bc——字的背景颜色
-				s——要绘制的字符
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Gui_DrawFont_GBK16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, char *s)
 {
 	unsigned char i,j;
@@ -236,7 +194,6 @@ void Gui_DrawFont_GBK16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, char *
 	}
 }
 
-<<<<<<< HEAD
 /**
 * @brief		绘制高16像素、宽8像素的数字
 * @param		x 该数字的左上角像素的横坐标
@@ -246,21 +203,6 @@ void Gui_DrawFont_GBK16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, char *
 * @param		num 要绘制的数字
 * @return		无
 */
-=======
-/**************************************************************************************
-	函数名称：	Gui_DrawFont_Num16
-
-	函数功能：	绘制GBK编码长宽为16像素的数字
-
-	入口参数：	x——该数字的左上角横坐标
-				y——该数字的左上角纵坐标
-				fc——数字的颜色
-				bc——数字的背景颜色
-				num——要绘制的数字
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Gui_DrawFont_Num16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16_t num)
 {
 	unsigned char i,j;
@@ -277,7 +219,6 @@ void Gui_DrawFont_Num16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16
 
 
 
-<<<<<<< HEAD
 /**
 * @brief		绘制长宽为32像素的数码管字体数字
 * @param		x 该数字的左上角像素的横坐标
@@ -288,22 +229,6 @@ void Gui_DrawFont_Num16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16
 * @return		无
 * @note			在电压电流表数字模式以及温湿度计功能中，显示数值用
 */
-=======
-
-/**************************************************************************************
-	函数名称：	Gui_DrawFont_Num32
-
-	函数功能：	绘制长宽为32像素的数码管字体数字
-
-	入口参数：	x——该数字的左上角横坐标
-				y——该数字的左上角纵坐标
-				fc——数字的颜色
-				bc——数字的背景颜色
-				num——要绘制的数字
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Gui_DrawFont_Num32(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16_t num)
 {
 	unsigned char i,j,k,c;
@@ -324,7 +249,6 @@ void Gui_DrawFont_Num32(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16
 	}
 }
 
-<<<<<<< HEAD
 
 /**
 * @brief		绘制16*16像素的图片
@@ -334,19 +258,6 @@ void Gui_DrawFont_Num32(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16
 * @return		无
 * @note			用于绘制状态栏图标
 */
-=======
-/**************************************************************************************
-	函数名称：	showimage_16
-
-	函数功能：	绘制16*16像素的图片
-
-	入口参数：	p——图片名
-				x1——图片左上角的横坐标
-				y1——图片左上角的纵坐标
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void showimage_16(const unsigned char *p, uint8_t x1,uint8_t y1) //显示16*16图片
 {	
 	uint16_t i;
@@ -361,7 +272,6 @@ void showimage_16(const unsigned char *p, uint8_t x1,uint8_t y1) //显示16*16图片
 }
 
 
-<<<<<<< HEAD
 
 /**
 * @brief		绘制系统LOGO
@@ -370,18 +280,6 @@ void showimage_16(const unsigned char *p, uint8_t x1,uint8_t y1) //显示16*16图片
 * @return		无
 * @note			LOGO分辨率为100*32
 */
-=======
-/**************************************************************************************
-	函数名称：	showimage_16
-
-	函数功能：	绘制系统LOGO
-
-	入口参数：	x1——LOGO左上角的横坐标
-				y1——LOGO左上角的纵坐标
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Show_Logo(uint8_t x1,uint8_t y1)
 {
 	const unsigned char *p = logo;

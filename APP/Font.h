@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         Font.h
 * @brief		字体库头文件
@@ -9,19 +8,6 @@
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
 
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
-
-/*
-Font.h 字体库头文件
-*/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #define USE_ONCHIP_FLASH_FONT 1
 const unsigned char asc16[]={
 #if USE_ONCHIP_FLASH_FONT
@@ -240,20 +226,4 @@ const struct typFNT_GB162 hz16[] = {
 0x00,
 };
 
-<<<<<<< HEAD
 
-=======
-struct typFNT_GB242
-{
-       unsigned char Index[2];	
-       char Msk[72];
-};
-
-#define hz24_num   20
-const struct typFNT_GB242 hz24[] = 
-{
-#if USE_ONCHIP_FLASH_FONT
-#endif
-0x00,
-};
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952

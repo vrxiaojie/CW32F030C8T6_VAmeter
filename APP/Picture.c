@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         Picture.c
 * @brief		存放图片数组的源文件
@@ -19,24 +18,6 @@ Image2LCD取模选项设置
 自顶至底
 低位在前
 */
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
- 
-//Image2LCD取模选项设置
-//水平扫描
-//16位
-//40X40
-//不包含图像头数据
-//自左至右
-//自顶至底
-//低位在前
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 
 /*logo*/
 const unsigned char logo[6400] = { /* 0X00,0X10,0X64,0X00,0X20,0X00,0X01,0X1B, */

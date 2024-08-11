@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         key.c
 * @brief		按键相关操作的源文件
@@ -23,26 +22,6 @@ uint8_t key_flag[5]={0,0,0,0,0};
 * @return		无	
 */
 
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
-
-#include "key.h"
-/**************************************************************************************
-	函数名称：	Key_Init
-
-	函数功能：	按键初始化函数
-
-	入口参数：	无
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Key_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStruct;
@@ -59,7 +38,6 @@ void Key_Init(void)
     GPIO_Init(CW_GPIOA, &GPIO_InitStruct);				//初始化
 }
 
-<<<<<<< HEAD
 /**
 * @brief		使用状态机检查按键状态
 * @param		无
@@ -67,17 +45,6 @@ void Key_Init(void)
 * @note			key_status为0-->未按下 <br> key_status为1-->点按 <br> key_status为15-->长按
 */
 
-=======
-/**************************************************************************************
-	函数名称：	Check_Key_Status
-
-	函数功能：	使用状态机检查按键状态
-
-	入口参数：	无
-
-	返回参数：	无
-**************************************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Check_Key_Status()
 {
 

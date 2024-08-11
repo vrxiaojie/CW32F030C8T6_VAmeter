@@ -415,14 +415,6 @@
               <FilePath>..\..\APP\Lcd_Driver.h</FilePath>
             </File>
             <File>
-<<<<<<< HEAD
-=======
-              <FileName>LCD_Config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\APP\LCD_Config.h</FilePath>
-            </File>
-            <File>
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
               <FileName>esp8266_cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\APP\esp8266_cmd.c</FilePath>
@@ -537,7 +529,6 @@
               <FileType>5</FileType>
               <FilePath>..\..\APP\str.h</FilePath>
             </File>
-<<<<<<< HEAD
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
@@ -548,8 +539,6 @@
               <FileType>5</FileType>
               <FilePath>..\..\APP\gpio.h</FilePath>
             </File>
-=======
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
           </Files>
         </Group>
         <Group>
@@ -558,11 +547,7 @@
             <File>
               <FileName>startup_cw32f030.s</FileName>
               <FileType>2</FileType>
-<<<<<<< HEAD
               <FilePath>..\..\Board\startup_cw32f030.s</FilePath>
-=======
-              <FilePath>..\..\APP\startup_cw32f030.s</FilePath>
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
             </File>
           </Files>
         </Group>

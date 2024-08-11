@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @file         tim.c
 * @brief		定时器相关的源文件
@@ -9,21 +8,11 @@
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
 
-=======
-/*
- * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
- * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
- *
- *   Date           Author
- * 2024-08-10     VRxiaojie
- */
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #include "tim.h"
 #include "esp8266_cmd.h"
 #include "menu.h"
 #include "Lcd_Driver.h"
 
-<<<<<<< HEAD
 uint8_t bat_cnt=0;  ///<更新电池电量时间计数
 
 /**
@@ -32,16 +21,6 @@ uint8_t bat_cnt=0;  ///<更新电池电量时间计数
 * @return		无	
 */
 
-=======
-uint8_t bat_cnt=0;
-
-/******************************************************************
- * 函 数 名 称：BTIM1_Init
- * 函 数 说 明：定时器BTIM1初始化函数  10ms 中断一次
- * 函 数 形 参：无
- * 函 数 返 回：无
-******************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void BTIM1_Init(void)
 {
     // 使能BTIM1的时钟
@@ -72,22 +51,12 @@ void BTIM1_Init(void)
     BTIM_Cmd(CW_BTIM1, ENABLE);
 }
 
-<<<<<<< HEAD
 /**
 * @brief		定时器BTIM1中断服务函数，用于判断按键状态
 * @param		无
 * @return		无	
 */
 
-=======
-
-/******************************************************************
- * 函 数 名 称：BTIM1_IRQHandler
- * 函 数 说 明：定时器BTIM1中断服务函数，用处是判断按键状态
- * 函 数 形 参：无
- * 函 数 返 回：无
-******************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void BTIM1_IRQHandler(void)
 {
     // 判断是否为溢出中断
@@ -100,21 +69,12 @@ void BTIM1_IRQHandler(void)
     }
 }
 
-<<<<<<< HEAD
 /**
 * @brief		定时器BTIM2初始化函数  1s 中断一次
 * @param		无
 * @return		无	
 */
 
-=======
-/******************************************************************
- * 函 数 名 称：BTIM2_Init
- * 函 数 说 明：定时器BTIM1初始化函数  1s 中断一次
- * 函 数 形 参：无
- * 函 数 返 回：无
-******************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void BTIM2_Init(void)
 {
     // 使能BTIM2的时钟
@@ -145,22 +105,12 @@ void BTIM2_Init(void)
     BTIM_Cmd(CW_BTIM2, ENABLE);
 }
 
-<<<<<<< HEAD
 /**
 * @brief		定时器BTIM2中断服务函数，用于更新状态栏
 * @param		无
 * @return		无	
 */
 
-=======
-
-/******************************************************************
- * 函 数 名 称：BTIM2_Init
- * 函 数 说 明：定时器BTIM2中断服务函数，用于更新状态栏
- * 函 数 形 参：无
- * 函 数 返 回：无
-******************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void BTIM2_IRQHandler(void)
 {
     // 判断是否为溢出中断
@@ -185,22 +135,12 @@ void BTIM2_IRQHandler(void)
     }
 }
 
-<<<<<<< HEAD
 /**
 * @brief		定时器GTIM3初始化函数，用于屏幕PWM调光
 * @param		无
 * @return		无	
 */
 
-=======
-
-/******************************************************************
- * 函 数 名 GTIM3_PWM_Init
- * 函 数 说 明：定时器GTIM3初始化函数，用于屏幕PWM调光
- * 函 数 形 参：无
- * 函 数 返 回：无
-******************************************************************/
->>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void GTIM3_PWM_Init(void)
 {
 	PC15_AFx_GTIM3CH2();						// 使用复用功能，复用为通用定时器3通道2
