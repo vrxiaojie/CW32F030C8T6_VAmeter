@@ -10,9 +10,6 @@ var esp8266__cmd_8c =
     [ "USART_SendString", "esp8266__cmd_8c.html#a2194529694ce26bd9913f172f05c7fed", null ],
     [ "connect_retry_cnt", "esp8266__cmd_8c.html#ae8d48583d2afe8da67b66c3b11c47c6e", null ],
     [ "esp8266_buf", "esp8266__cmd_8c.html#ad9302b4cc0c4b53641111fd11dbd2d91", null ],
-    [ "esp8266_cnt", "esp8266__cmd_8c.html#a46779094a9b514543c062c20c0add650", null ],
-    [ "esp8266_cntPre", "esp8266__cmd_8c.html#a79aab3df1133da471fbe7182d450fc52", null ],
-    [ "ESP8266_Last_Status", "esp8266__cmd_8c.html#ab5366a070db023d896628ce58bd5504a", null ],
     [ "ESP8266_Status", "esp8266__cmd_8c.html#aa85d9700d50398afe1fb183a196a597b", null ],
     [ "retry_cnt", "esp8266__cmd_8c.html#a2bdee10b315515da8d39dc8d7a4a61e2", null ],
     [ "WIFI_Status", "esp8266__cmd_8c.html#a59269537e7e881ed8f608c3f7a5de4c1", null ]

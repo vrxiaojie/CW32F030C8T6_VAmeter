@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>基于CW32的电压电流表: D:/09电压电流表训练营/CW32F030C8T6_VAmeter/APP/esp8266_cmd.h 文件参考</title>
+<title>基于CW32的电压电流表: D:/09电压电流表训练营/CW32F030C8T6_VAmeter_release/APP/esp8266_cmd.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -125,7 +125,8 @@ $(function(){initNavTree('esp8266__cmd_8h.html',''); initResizable(true); });
 <tr class="memitem:a2194529694ce26bd9913f172f05c7fed" id="r_a2194529694ce26bd9913f172f05c7fed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2194529694ce26bd9913f172f05c7fed">USART_SendString</a> (UART_TypeDef *USARTx, uint8_t *DataString)</td></tr>
 <tr class="memdesc:a2194529694ce26bd9913f172f05c7fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">USART发送字符串  <br /></td></tr>
 <tr class="separator:a2194529694ce26bd9913f172f05c7fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a321c44bed0a4a78fe08b1c29f219eeaa" id="r_a321c44bed0a4a78fe08b1c29f219eeaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a321c44bed0a4a78fe08b1c29f219eeaa">ESP8266_SendData</a> (uint8_t *data, uint16_t len)</td></tr>
+<tr class="memitem:a321c44bed0a4a78fe08b1c29f219eeaa" id="r_a321c44bed0a4a78fe08b1c29f219eeaa"><td class="memItemLeft" align="right" valign="top"><a id="a321c44bed0a4a78fe08b1c29f219eeaa" name="a321c44bed0a4a78fe08b1c29f219eeaa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ESP8266_SendData</b> (uint8_t *data, uint16_t len)</td></tr>
 <tr class="separator:a321c44bed0a4a78fe08b1c29f219eeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a846bd3892ad76a2e0589298e6026a2eb" id="r_a846bd3892ad76a2e0589298e6026a2eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a846bd3892ad76a2e0589298e6026a2eb">ESP8266_Clear</a> (void)</td></tr>
 <tr class="memdesc:a846bd3892ad76a2e0589298e6026a2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空ESP8266 UART接收缓存  <br /></td></tr>
@@ -145,17 +146,26 @@ $(function(){initNavTree('esp8266__cmd_8h.html',''); initResizable(true); });
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:ad9302b4cc0c4b53641111fd11dbd2d91" id="r_ad9302b4cc0c4b53641111fd11dbd2d91"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9302b4cc0c4b53641111fd11dbd2d91">esp8266_buf</a> [1000]</td></tr>
+<tr class="memitem:ad9302b4cc0c4b53641111fd11dbd2d91" id="r_ad9302b4cc0c4b53641111fd11dbd2d91"><td class="memItemLeft" align="right" valign="top"><a id="ad9302b4cc0c4b53641111fd11dbd2d91" name="ad9302b4cc0c4b53641111fd11dbd2d91"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>esp8266_buf</b> [1000]</td></tr>
+<tr class="memdesc:ad9302b4cc0c4b53641111fd11dbd2d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP8266接收数据临时存储数组 <br /></td></tr>
 <tr class="separator:ad9302b4cc0c4b53641111fd11dbd2d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46779094a9b514543c062c20c0add650" id="r_a46779094a9b514543c062c20c0add650"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46779094a9b514543c062c20c0add650">esp8266_cnt</a></td></tr>
+<tr class="memitem:a46779094a9b514543c062c20c0add650" id="r_a46779094a9b514543c062c20c0add650"><td class="memItemLeft" align="right" valign="top"><a id="a46779094a9b514543c062c20c0add650" name="a46779094a9b514543c062c20c0add650"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>esp8266_cnt</b></td></tr>
 <tr class="separator:a46779094a9b514543c062c20c0add650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79aab3df1133da471fbe7182d450fc52" id="r_a79aab3df1133da471fbe7182d450fc52"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79aab3df1133da471fbe7182d450fc52">esp8266_cntPre</a></td></tr>
+<tr class="memitem:a79aab3df1133da471fbe7182d450fc52" id="r_a79aab3df1133da471fbe7182d450fc52"><td class="memItemLeft" align="right" valign="top"><a id="a79aab3df1133da471fbe7182d450fc52" name="a79aab3df1133da471fbe7182d450fc52"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>esp8266_cntPre</b></td></tr>
 <tr class="separator:a79aab3df1133da471fbe7182d450fc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59269537e7e881ed8f608c3f7a5de4c1" id="r_a59269537e7e881ed8f608c3f7a5de4c1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59269537e7e881ed8f608c3f7a5de4c1">WIFI_Status</a></td></tr>
+<tr class="memitem:a59269537e7e881ed8f608c3f7a5de4c1" id="r_a59269537e7e881ed8f608c3f7a5de4c1"><td class="memItemLeft" align="right" valign="top"><a id="a59269537e7e881ed8f608c3f7a5de4c1" name="a59269537e7e881ed8f608c3f7a5de4c1"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_Status</b></td></tr>
+<tr class="memdesc:a59269537e7e881ed8f608c3f7a5de4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI状态，0为未连接，1为已连接 <br /></td></tr>
 <tr class="separator:a59269537e7e881ed8f608c3f7a5de4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa85d9700d50398afe1fb183a196a597b" id="r_aa85d9700d50398afe1fb183a196a597b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa85d9700d50398afe1fb183a196a597b">ESP8266_Status</a></td></tr>
+<tr class="memitem:aa85d9700d50398afe1fb183a196a597b" id="r_aa85d9700d50398afe1fb183a196a597b"><td class="memItemLeft" align="right" valign="top"><a id="aa85d9700d50398afe1fb183a196a597b" name="aa85d9700d50398afe1fb183a196a597b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>ESP8266_Status</b></td></tr>
+<tr class="memdesc:aa85d9700d50398afe1fb183a196a597b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP8266状态，0为未连接，1为已连接 <br /></td></tr>
 <tr class="separator:aa85d9700d50398afe1fb183a196a597b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5366a070db023d896628ce58bd5504a" id="r_ab5366a070db023d896628ce58bd5504a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5366a070db023d896628ce58bd5504a">ESP8266_Last_Status</a></td></tr>
+<tr class="memitem:ab5366a070db023d896628ce58bd5504a" id="r_ab5366a070db023d896628ce58bd5504a"><td class="memItemLeft" align="right" valign="top"><a id="ab5366a070db023d896628ce58bd5504a" name="ab5366a070db023d896628ce58bd5504a"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>ESP8266_Last_Status</b></td></tr>
 <tr class="separator:ab5366a070db023d896628ce58bd5504a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -305,27 +315,6 @@ $(function(){initNavTree('esp8266__cmd_8h.html',''); initResizable(true); });
 
 </div>
 </div>
-<a id="a321c44bed0a4a78fe08b1c29f219eeaa" name="a321c44bed0a4a78fe08b1c29f219eeaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a321c44bed0a4a78fe08b1c29f219eeaa">&#9670;&#160;</a></span>ESP8266_SendData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ESP8266_SendData </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9d50fa093114c0e9a46a9a4b4ff19b2c" name="a9d50fa093114c0e9a46a9a4b4ff19b2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d50fa093114c0e9a46a9a4b4ff19b2c">&#9670;&#160;</a></span>Network_info()</h2>
 
@@ -381,131 +370,6 @@ $(function(){initNavTree('esp8266__cmd_8h.html',''); initResizable(true); });
 </dl>
 <dl class="section return"><dt>返回</dt><dd>无 <br  />
  </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">变量说明</h2>
-<a id="ad9302b4cc0c4b53641111fd11dbd2d91" name="ad9302b4cc0c4b53641111fd11dbd2d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9302b4cc0c4b53641111fd11dbd2d91">&#9670;&#160;</a></span>esp8266_buf</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t esp8266_buf[1000]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a46779094a9b514543c062c20c0add650" name="a46779094a9b514543c062c20c0add650"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46779094a9b514543c062c20c0add650">&#9670;&#160;</a></span>esp8266_cnt</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t esp8266_cnt</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a79aab3df1133da471fbe7182d450fc52" name="a79aab3df1133da471fbe7182d450fc52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79aab3df1133da471fbe7182d450fc52">&#9670;&#160;</a></span>esp8266_cntPre</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t esp8266_cntPre</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab5366a070db023d896628ce58bd5504a" name="ab5366a070db023d896628ce58bd5504a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5366a070db023d896628ce58bd5504a">&#9670;&#160;</a></span>ESP8266_Last_Status</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ESP8266_Last_Status</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa85d9700d50398afe1fb183a196a597b" name="aa85d9700d50398afe1fb183a196a597b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa85d9700d50398afe1fb183a196a597b">&#9670;&#160;</a></span>ESP8266_Status</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ESP8266_Status</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a59269537e7e881ed8f608c3f7a5de4c1" name="a59269537e7e881ed8f608c3f7a5de4c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59269537e7e881ed8f608c3f7a5de4c1">&#9670;&#160;</a></span>WIFI_Status</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t WIFI_Status</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

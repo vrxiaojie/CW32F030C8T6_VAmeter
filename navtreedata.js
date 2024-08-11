@@ -27,16 +27,12 @@ var NAVTREE =
   [ "基于CW32的电压电流表", "index.html", [
     [ "结构体", "annotated.html", [
       [ "结构体", "annotated.html", "annotated_dup" ],
-      [ "结构体索引", "classes.html", null ],
-      [ "成员变量", "functions.html", [
-        [ "全部", "functions.html", null ],
-        [ "变量", "functions_vars.html", null ]
-      ] ]
+      [ "结构体索引", "classes.html", null ]
     ] ],
     [ "文件", "files.html", [
       [ "文件列表", "files.html", "files_dup" ],
       [ "全局定义", "globals.html", [
-        [ "全部", "globals.html", "globals_dup" ],
+        [ "全部", "globals.html", null ],
         [ "函数", "globals_func.html", null ],
         [ "变量", "globals_vars.html", null ],
         [ "宏定义", "globals_defs.html", null ]
@@ -47,8 +43,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_font_8h.html",
-"menu_8c.html#a6569a60e58f2106e30e04f94e0f7cc7c"
+"_font_8h.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';
