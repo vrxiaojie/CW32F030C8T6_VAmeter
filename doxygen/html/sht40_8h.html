@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>基于CW32的电压电流表: D:/09电压电流表训练营/CW32F030C8T6_VAmeter/APP/sht40.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">基于CW32的电压电流表<span id="projectnumber">&#160;V1.0.0</span>
+   </div>
+   <div id="projectbrief">一款物联网多功能电压电流表</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('sht40_8h.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">sht40.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SHT40温湿度计的头文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;board.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="key_8h_source.html">key.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_g_u_i_8h_source.html">GUI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_lcd___driver_8h_source.html">Lcd_Driver.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+</div>
+<p><a href="sht40_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a526d580d324bce60a3e964066fae77e3" id="r_a526d580d324bce60a3e964066fae77e3"><td class="memItemLeft" align="right" valign="top"><a id="a526d580d324bce60a3e964066fae77e3" name="a526d580d324bce60a3e964066fae77e3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDA_PIN</b>&#160;&#160;&#160;GPIO_PIN_5</td></tr>
+<tr class="separator:a526d580d324bce60a3e964066fae77e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47af8b0e510ef86f6b69e120ac7f9de" id="r_ac47af8b0e510ef86f6b69e120ac7f9de"><td class="memItemLeft" align="right" valign="top"><a id="ac47af8b0e510ef86f6b69e120ac7f9de" name="ac47af8b0e510ef86f6b69e120ac7f9de"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SDA_PORT</b>&#160;&#160;&#160;CW_GPIOA</td></tr>
+<tr class="separator:ac47af8b0e510ef86f6b69e120ac7f9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c967e78bcedcee909a70764f879433" id="r_a06c967e78bcedcee909a70764f879433"><td class="memItemLeft" align="right" valign="top"><a id="a06c967e78bcedcee909a70764f879433" name="a06c967e78bcedcee909a70764f879433"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SCL_PIN</b>&#160;&#160;&#160;GPIO_PIN_6</td></tr>
+<tr class="separator:a06c967e78bcedcee909a70764f879433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac290a46b6e8e07654c81d01d5e5f288b" id="r_ac290a46b6e8e07654c81d01d5e5f288b"><td class="memItemLeft" align="right" valign="top"><a id="ac290a46b6e8e07654c81d01d5e5f288b" name="ac290a46b6e8e07654c81d01d5e5f288b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SCL_PORT</b>&#160;&#160;&#160;CW_GPIOA</td></tr>
+<tr class="separator:ac290a46b6e8e07654c81d01d5e5f288b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1563956f6a605a3c0aa213125b136b" id="r_aff1563956f6a605a3c0aa213125b136b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff1563956f6a605a3c0aa213125b136b">READ_SDA</a>()</td></tr>
+<tr class="separator:aff1563956f6a605a3c0aa213125b136b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fecb15b5c319db1fcbb392c33a5414b" id="r_a9fecb15b5c319db1fcbb392c33a5414b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fecb15b5c319db1fcbb392c33a5414b">SDA_HIGH</a>()</td></tr>
+<tr class="separator:a9fecb15b5c319db1fcbb392c33a5414b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac829adcb9fba8746b0043ac9bbdade2b" id="r_ac829adcb9fba8746b0043ac9bbdade2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac829adcb9fba8746b0043ac9bbdade2b">SDA_LOW</a>()</td></tr>
+<tr class="separator:ac829adcb9fba8746b0043ac9bbdade2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4007e63d6af07d213c63ec0cc4cbee5c" id="r_a4007e63d6af07d213c63ec0cc4cbee5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4007e63d6af07d213c63ec0cc4cbee5c">SCL_HIGH</a>()</td></tr>
+<tr class="separator:a4007e63d6af07d213c63ec0cc4cbee5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5d7e04da8c7b5ad4a1b2b71cdf2373" id="r_a1c5d7e04da8c7b5ad4a1b2b71cdf2373"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5d7e04da8c7b5ad4a1b2b71cdf2373">SCL_LOW</a>()</td></tr>
+<tr class="separator:a1c5d7e04da8c7b5ad4a1b2b71cdf2373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a2927c97fc34b7f74b7e8a29950d44" id="r_ad8a2927c97fc34b7f74b7e8a29950d44"><td class="memItemLeft" align="right" valign="top"><a id="ad8a2927c97fc34b7f74b7e8a29950d44" name="ad8a2927c97fc34b7f74b7e8a29950d44"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHT40_ADDRESS</b>&#160;&#160;&#160;0x44</td></tr>
+<tr class="separator:ad8a2927c97fc34b7f74b7e8a29950d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8a717a307e97bbd47eff377ff5f3a4" id="r_aeb8a717a307e97bbd47eff377ff5f3a4"><td class="memItemLeft" align="right" valign="top"><a id="aeb8a717a307e97bbd47eff377ff5f3a4" name="aeb8a717a307e97bbd47eff377ff5f3a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHT40_COMMAND_MEASURE_HIGH_PRECISION</b>&#160;&#160;&#160;0xFD</td></tr>
+<tr class="separator:aeb8a717a307e97bbd47eff377ff5f3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a469b076963ab17b0df22ab08be56d5fb" id="r_a469b076963ab17b0df22ab08be56d5fb"><td class="memItemLeft" align="right" valign="top"><a id="a469b076963ab17b0df22ab08be56d5fb" name="a469b076963ab17b0df22ab08be56d5fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SHT40_Show_Temp_Humid</b> (void)</td></tr>
+<tr class="separator:a469b076963ab17b0df22ab08be56d5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>SHT40温湿度计的头文件 </p>
+<dl class="section author"><dt>作者</dt><dd>VRxiaojie </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024-08-11 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>哔哩哔哩 : VR小杰 <a href="https://space.bilibili.com/11526854">https://space.bilibili.com/11526854</a> <br  />
+ 嘉立创开源广场: vrxiaojie <a href="https://oshwhub.com/vrxiaojie/">https://oshwhub.com/vrxiaojie/</a> <br  />
+ </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="aff1563956f6a605a3c0aa213125b136b" name="aff1563956f6a605a3c0aa213125b136b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1563956f6a605a3c0aa213125b136b">&#9670;&#160;</a></span>READ_SDA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ_SDA</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">GPIO_ReadPin(SDA_PORT, SDA_PIN)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4007e63d6af07d213c63ec0cc4cbee5c" name="a4007e63d6af07d213c63ec0cc4cbee5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4007e63d6af07d213c63ec0cc4cbee5c">&#9670;&#160;</a></span>SCL_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_HIGH</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">GPIO_WritePin(SCL_PORT, SCL_PIN, GPIO_Pin_SET)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1c5d7e04da8c7b5ad4a1b2b71cdf2373" name="a1c5d7e04da8c7b5ad4a1b2b71cdf2373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5d7e04da8c7b5ad4a1b2b71cdf2373">&#9670;&#160;</a></span>SCL_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_LOW</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">GPIO_WritePin(SCL_PORT, SCL_PIN, GPIO_Pin_RESET)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9fecb15b5c319db1fcbb392c33a5414b" name="a9fecb15b5c319db1fcbb392c33a5414b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fecb15b5c319db1fcbb392c33a5414b">&#9670;&#160;</a></span>SDA_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_HIGH</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">GPIO_WritePin(SDA_PORT, SDA_PIN, GPIO_Pin_SET)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac829adcb9fba8746b0043ac9bbdade2b" name="ac829adcb9fba8746b0043ac9bbdade2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac829adcb9fba8746b0043ac9bbdade2b">&#9670;&#160;</a></span>SDA_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_LOW</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">GPIO_WritePin(SDA_PORT, SDA_PIN, GPIO_Pin_RESET)</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0ca16891106f5a3e9ad635a0d6c5f98f.html">APP</a></li><li class="navelem"><a class="el" href="sht40_8h.html">sht40.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

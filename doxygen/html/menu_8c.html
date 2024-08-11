@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>基于CW32的电压电流表: D:/09电压电流表训练营/CW32F030C8T6_VAmeter/APP/menu.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">基于CW32的电压电流表<span id="projectnumber">&#160;V1.0.0</span>
+   </div>
+   <div id="projectbrief">一款物联网多功能电压电流表</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('menu_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">menu.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>菜单相关函数源文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="menu_8h_source.html">menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_g_u_i_8h_source.html">GUI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_lcd___driver_8h_source.html">Lcd_Driver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="esp8266__cmd_8h_source.html">esp8266_cmd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mqtt_8h_source.html">mqtt.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sys_8h_source.html">sys.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="adc_8h_source.html">adc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="va__meter_8h_source.html">va_meter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sht40_8h_source.html">sht40.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a14e388755fe740a5199bdc4dce643ecc" id="r_a14e388755fe740a5199bdc4dce643ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14e388755fe740a5199bdc4dce643ecc">Show_Status_Bar</a> ()</td></tr>
+<tr class="memdesc:a14e388755fe740a5199bdc4dce643ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示状态栏  <br /></td></tr>
+<tr class="separator:a14e388755fe740a5199bdc4dce643ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd969be1ba6f2224fd72aa6de546f595" id="r_acd969be1ba6f2224fd72aa6de546f595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd969be1ba6f2224fd72aa6de546f595">Show_Main_Menu</a> ()</td></tr>
+<tr class="memdesc:acd969be1ba6f2224fd72aa6de546f595"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示主菜单  <br /></td></tr>
+<tr class="separator:acd969be1ba6f2224fd72aa6de546f595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e896233be450f898931484bc7a80669" id="r_a2e896233be450f898931484bc7a80669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e896233be450f898931484bc7a80669">Show_Sub_Menu</a> ()</td></tr>
+<tr class="memdesc:a2e896233be450f898931484bc7a80669"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示次级菜单  <br /></td></tr>
+<tr class="separator:a2e896233be450f898931484bc7a80669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8e37e045932d0861513c34a88198d1" id="r_afd8e37e045932d0861513c34a88198d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd8e37e045932d0861513c34a88198d1">Choose_Sub_Function</a> ()</td></tr>
+<tr class="memdesc:afd8e37e045932d0861513c34a88198d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">次级菜单按钮被选中  <br /></td></tr>
+<tr class="separator:afd8e37e045932d0861513c34a88198d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8b5044a1142bff7b95efeaf63a4aec" id="r_a6f8b5044a1142bff7b95efeaf63a4aec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f8b5044a1142bff7b95efeaf63a4aec">Choose_Main_Function</a> ()</td></tr>
+<tr class="memdesc:a6f8b5044a1142bff7b95efeaf63a4aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">主菜单按钮被选中  <br /></td></tr>
+<tr class="separator:a6f8b5044a1142bff7b95efeaf63a4aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6569a60e58f2106e30e04f94e0f7cc7c" id="r_a6569a60e58f2106e30e04f94e0f7cc7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6569a60e58f2106e30e04f94e0f7cc7c">Restore_Sub_Menu_Button</a> (uint8_t idx)</td></tr>
+<tr class="memdesc:a6569a60e58f2106e30e04f94e0f7cc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">次级菜单按钮恢复未被选中状态  <br /></td></tr>
+<tr class="separator:a6569a60e58f2106e30e04f94e0f7cc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43ea6d43e91d80980fb46ba9b6e5a67" id="r_ac43ea6d43e91d80980fb46ba9b6e5a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac43ea6d43e91d80980fb46ba9b6e5a67">Restore_Main_Menu_Button</a> (uint8_t idx)</td></tr>
+<tr class="memdesc:ac43ea6d43e91d80980fb46ba9b6e5a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">主菜单按钮恢复未被选中状态  <br /></td></tr>
+<tr class="separator:ac43ea6d43e91d80980fb46ba9b6e5a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8529c38f66d42d7f4c761fc63cc2cdf" id="r_aa8529c38f66d42d7f4c761fc63cc2cdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8529c38f66d42d7f4c761fc63cc2cdf">Run_Function</a> ()</td></tr>
+<tr class="memdesc:aa8529c38f66d42d7f4c761fc63cc2cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行对应的功能函数  <br /></td></tr>
+<tr class="separator:aa8529c38f66d42d7f4c761fc63cc2cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a6fe54f3258b5ed57bd6ec5f554471e61" id="r_a6fe54f3258b5ed57bd6ec5f554471e61"><td class="memItemLeft" align="right" valign="top"><a id="a6fe54f3258b5ed57bd6ec5f554471e61" name="a6fe54f3258b5ed57bd6ec5f554471e61"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>main_menu_index</b> = 0</td></tr>
+<tr class="separator:a6fe54f3258b5ed57bd6ec5f554471e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa000f1f3ab761706c220d0446101d6" id="r_affa000f1f3ab761706c220d0446101d6"><td class="memItemLeft" align="right" valign="top"><a id="affa000f1f3ab761706c220d0446101d6" name="affa000f1f3ab761706c220d0446101d6"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sub_menu_index</b> = 0</td></tr>
+<tr class="separator:affa000f1f3ab761706c220d0446101d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664e5faa6896e47af3e93e8ccc67e987" id="r_a664e5faa6896e47af3e93e8ccc67e987"><td class="memItemLeft" align="right" valign="top"><a id="a664e5faa6896e47af3e93e8ccc67e987" name="a664e5faa6896e47af3e93e8ccc67e987"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>in_progress_flag</b> = 0</td></tr>
+<tr class="separator:a664e5faa6896e47af3e93e8ccc67e987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2012b58e94ef5b460c3050e7fbbe38ff" id="r_a2012b58e94ef5b460c3050e7fbbe38ff"><td class="memItemLeft" align="right" valign="top"><a id="a2012b58e94ef5b460c3050e7fbbe38ff" name="a2012b58e94ef5b460c3050e7fbbe38ff"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>in_sub_menu_flag</b> = 0</td></tr>
+<tr class="separator:a2012b58e94ef5b460c3050e7fbbe38ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c613bd60cd411b742a58176b704c4c" id="r_a32c613bd60cd411b742a58176b704c4c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32c613bd60cd411b742a58176b704c4c">FUN</a> [5][5])()</td></tr>
+<tr class="separator:a32c613bd60cd411b742a58176b704c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9041773f3b6fff8d0835fdb93e8c63b6" id="r_a9041773f3b6fff8d0835fdb93e8c63b6"><td class="memItemLeft" align="right" valign="top"><a id="a9041773f3b6fff8d0835fdb93e8c63b6" name="a9041773f3b6fff8d0835fdb93e8c63b6"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>main_menu_button</b> [] = {&quot;电压电流&quot;,&quot;温湿度计&quot;,&quot;WIFI &quot;,&quot;MQTT &quot;,&quot;系统设置&quot;}</td></tr>
+<tr class="separator:a9041773f3b6fff8d0835fdb93e8c63b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6658ed1d5e5dae718ef7ec2b05db16" id="r_acd6658ed1d5e5dae718ef7ec2b05db16"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd6658ed1d5e5dae718ef7ec2b05db16">sub_menu_button</a> [5][5]</td></tr>
+<tr class="separator:acd6658ed1d5e5dae718ef7ec2b05db16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6172c1cd2ab5b2c693571ac7d9b7caf" id="r_ac6172c1cd2ab5b2c693571ac7d9b7caf"><td class="memItemLeft" align="right" valign="top"><a id="ac6172c1cd2ab5b2c693571ac7d9b7caf" name="ac6172c1cd2ab5b2c693571ac7d9b7caf"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sub_menu_maxidx</b> [5] = {<a class="el" href="menu_8h.html#aeb41eefa2b52f082991d09f652191c3c">SUB_MENU_0_INDEX</a>,SUB_MENU_1_INDEX,SUB_MENU_2_INDEX,SUB_MENU_3_INDEX,SUB_MENU_4_INDEX}</td></tr>
+<tr class="separator:ac6172c1cd2ab5b2c693571ac7d9b7caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>菜单相关函数源文件 </p>
+<dl class="section author"><dt>作者</dt><dd>VRxiaojie </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024-08-11 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>哔哩哔哩 : VR小杰 <a href="https://space.bilibili.com/11526854">https://space.bilibili.com/11526854</a> <br  />
+ 嘉立创开源广场: vrxiaojie <a href="https://oshwhub.com/vrxiaojie/">https://oshwhub.com/vrxiaojie/</a> <br  />
+ </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a6f8b5044a1142bff7b95efeaf63a4aec" name="a6f8b5044a1142bff7b95efeaf63a4aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8b5044a1142bff7b95efeaf63a4aec">&#9670;&#160;</a></span>Choose_Main_Function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Choose_Main_Function </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>主菜单按钮被选中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="afd8e37e045932d0861513c34a88198d1" name="afd8e37e045932d0861513c34a88198d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd8e37e045932d0861513c34a88198d1">&#9670;&#160;</a></span>Choose_Sub_Function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Choose_Sub_Function </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次级菜单按钮被选中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="ac43ea6d43e91d80980fb46ba9b6e5a67" name="ac43ea6d43e91d80980fb46ba9b6e5a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43ea6d43e91d80980fb46ba9b6e5a67">&#9670;&#160;</a></span>Restore_Main_Menu_Button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Restore_Main_Menu_Button </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>主菜单按钮恢复未被选中状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>之前被选中的主级菜单索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a6569a60e58f2106e30e04f94e0f7cc7c" name="a6569a60e58f2106e30e04f94e0f7cc7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6569a60e58f2106e30e04f94e0f7cc7c">&#9670;&#160;</a></span>Restore_Sub_Menu_Button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Restore_Sub_Menu_Button </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次级菜单按钮恢复未被选中状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>之前被选中的次级菜单索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="aa8529c38f66d42d7f4c761fc63cc2cdf" name="aa8529c38f66d42d7f4c761fc63cc2cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8529c38f66d42d7f4c761fc63cc2cdf">&#9670;&#160;</a></span>Run_Function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Run_Function </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行对应的功能函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="acd969be1ba6f2224fd72aa6de546f595" name="acd969be1ba6f2224fd72aa6de546f595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd969be1ba6f2224fd72aa6de546f595">&#9670;&#160;</a></span>Show_Main_Menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Show_Main_Menu </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>显示主菜单 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a14e388755fe740a5199bdc4dce643ecc" name="a14e388755fe740a5199bdc4dce643ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e388755fe740a5199bdc4dce643ecc">&#9670;&#160;</a></span>Show_Status_Bar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Show_Status_Bar </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>显示状态栏 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a2e896233be450f898931484bc7a80669" name="a2e896233be450f898931484bc7a80669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e896233be450f898931484bc7a80669">&#9670;&#160;</a></span>Show_Sub_Menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Show_Sub_Menu </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>显示次级菜单 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a32c613bd60cd411b742a58176b704c4c" name="a32c613bd60cd411b742a58176b704c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c613bd60cd411b742a58176b704c4c">&#9670;&#160;</a></span>FUN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* FUN[5][5])() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">{<a class="code hl_function" href="va__meter_8c.html#aa026f8269a5815e82d34e54cf3a0e500">Launch_VA_Meter</a>,<a class="code hl_function" href="va__meter_8c.html#aa026f8269a5815e82d34e54cf3a0e500">Launch_VA_Meter</a>},</div>
+<div class="line">{SHT40_Show_Temp_Humid},</div>
+<div class="line">{<a class="code hl_function" href="esp8266__cmd_8c.html#a201bebd46a40192e6a1c42ddf328ba5d">Connect_WIFI</a>,<a class="code hl_function" href="esp8266__cmd_8c.html#a5088cb1d2a0efa2312f2729675ffaa2c">Network_info</a>},</div>
+<div class="line">{<a class="code hl_function" href="mqtt_8c.html#a77980e1982a6b2a3048540d614dd1f48">MQTT_Setup</a>},</div>
+<div class="line">{<a class="code hl_function" href="sys_8c.html#a9c4b9c530a92718a8020f435d29f5d3e">System_Info</a>,<a class="code hl_function" href="esp8266__cmd_8c.html#aa9414a328d6e95d451bd1f36f1923f01">ESP8266_Reset</a>,<a class="code hl_function" href="sys_8c.html#af287ea3637ffde9cd62fe604c3a05f92">MCU_Sleep</a>,<a class="code hl_function" href="sys_8c.html#a38aeaefbe0560ef1039fcc20eb624497">Brightness_Setup</a>,<a class="code hl_function" href="sys_8c.html#adffa44815e8ebe8db7a594d0587678a8">Enable_or_Disable_ESP</a>}}</div>
+<div class="ttc" id="aesp8266__cmd_8c_html_a201bebd46a40192e6a1c42ddf328ba5d"><div class="ttname"><a href="esp8266__cmd_8c.html#a201bebd46a40192e6a1c42ddf328ba5d">Connect_WIFI</a></div><div class="ttdeci">void Connect_WIFI()</div><div class="ttdoc">连接WIFI</div><div class="ttdef"><b>定义</b> esp8266_cmd.c:197</div></div>
+<div class="ttc" id="aesp8266__cmd_8c_html_a5088cb1d2a0efa2312f2729675ffaa2c"><div class="ttname"><a href="esp8266__cmd_8c.html#a5088cb1d2a0efa2312f2729675ffaa2c">Network_info</a></div><div class="ttdeci">void Network_info()</div><div class="ttdoc">查询网络信息</div><div class="ttdef"><b>定义</b> esp8266_cmd.c:124</div></div>
+<div class="ttc" id="aesp8266__cmd_8c_html_aa9414a328d6e95d451bd1f36f1923f01"><div class="ttname"><a href="esp8266__cmd_8c.html#aa9414a328d6e95d451bd1f36f1923f01">ESP8266_Reset</a></div><div class="ttdeci">void ESP8266_Reset(uint8_t echo)</div><div class="ttdoc">重置ESP8266</div><div class="ttdef"><b>定义</b> esp8266_cmd.c:305</div></div>
+<div class="ttc" id="amqtt_8c_html_a77980e1982a6b2a3048540d614dd1f48"><div class="ttname"><a href="mqtt_8c.html#a77980e1982a6b2a3048540d614dd1f48">MQTT_Setup</a></div><div class="ttdeci">void MQTT_Setup()</div><div class="ttdoc">MQTT设置</div><div class="ttdef"><b>定义</b> mqtt.c:21</div></div>
+<div class="ttc" id="asys_8c_html_a38aeaefbe0560ef1039fcc20eb624497"><div class="ttname"><a href="sys_8c.html#a38aeaefbe0560ef1039fcc20eb624497">Brightness_Setup</a></div><div class="ttdeci">void Brightness_Setup()</div><div class="ttdoc">设置屏幕亮度</div><div class="ttdef"><b>定义</b> sys.c:81</div></div>
+<div class="ttc" id="asys_8c_html_a9c4b9c530a92718a8020f435d29f5d3e"><div class="ttname"><a href="sys_8c.html#a9c4b9c530a92718a8020f435d29f5d3e">System_Info</a></div><div class="ttdeci">void System_Info()</div><div class="ttdoc">显示系统信息</div><div class="ttdef"><b>定义</b> sys.c:65</div></div>
+<div class="ttc" id="asys_8c_html_adffa44815e8ebe8db7a594d0587678a8"><div class="ttname"><a href="sys_8c.html#adffa44815e8ebe8db7a594d0587678a8">Enable_or_Disable_ESP</a></div><div class="ttdeci">void Enable_or_Disable_ESP()</div><div class="ttdoc">启动或停止ESP8266</div><div class="ttdef"><b>定义</b> sys.c:160</div></div>
+<div class="ttc" id="asys_8c_html_af287ea3637ffde9cd62fe604c3a05f92"><div class="ttname"><a href="sys_8c.html#af287ea3637ffde9cd62fe604c3a05f92">MCU_Sleep</a></div><div class="ttdeci">void MCU_Sleep()</div><div class="ttdoc">让系统进入休眠</div><div class="ttdef"><b>定义</b> sys.c:19</div></div>
+<div class="ttc" id="ava__meter_8c_html_aa026f8269a5815e82d34e54cf3a0e500"><div class="ttname"><a href="va__meter_8c.html#aa026f8269a5815e82d34e54cf3a0e500">Launch_VA_Meter</a></div><div class="ttdeci">void Launch_VA_Meter(uint8_t idx)</div><div class="ttdoc">启动电压电流表</div><div class="ttdef"><b>定义</b> va_meter.c:70</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acd6658ed1d5e5dae718ef7ec2b05db16" name="acd6658ed1d5e5dae718ef7ec2b05db16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6658ed1d5e5dae718ef7ec2b05db16">&#9670;&#160;</a></span>sub_menu_button</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* sub_menu_button[5][5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">={{<span class="stringliteral">&quot;图形模式  &quot;</span>,<span class="stringliteral">&quot;数字模式  &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>},</div>
+<div class="line">{<span class="stringliteral">&quot;温湿度    &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>},</div>
+<div class="line">{<span class="stringliteral">&quot;连接WIFI  &quot;</span>,<span class="stringliteral">&quot;网络信息  &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>},</div>
+<div class="line">{<span class="stringliteral">&quot;连接MQTT  &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>,<span class="stringliteral">&quot;          &quot;</span>},</div>
+<div class="line">{<span class="stringliteral">&quot;系统参数  &quot;</span>,<span class="stringliteral">&quot;重置ESP   &quot;</span>,<span class="stringliteral">&quot;休眠      &quot;</span>,<span class="stringliteral">&quot;亮度设置  &quot;</span>,<span class="stringliteral">&quot;启动ESP8266 &quot;</span>}}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0ca16891106f5a3e9ad635a0d6c5f98f.html">APP</a></li><li class="navelem"><a class="el" href="menu_8c.html">menu.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

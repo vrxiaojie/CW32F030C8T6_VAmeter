@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['get_5fadc_5faverage_0',['Get_Adc_Average',['../adc_8c.html#af209a85aeeb30b065817483c79e771b2',1,'adc.c']]],
+  ['gpio_5fuser_5finit_1',['GPIO_User_Init',['../gpio_8c.html#ad3f330f9137d0f2c6da7fc9d66dcf8b9',1,'GPIO_User_Init():&#160;gpio.c'],['../gpio_8h.html#a6be7e6a8ef172a50d3568e4ecd01c25a',1,'GPIO_User_Init(void):&#160;gpio.c']]],
+  ['gpioa_5firqhandler_2',['GPIOA_IRQHandler',['../gpio_8c.html#a3d51c1a795330c9d019012fecae278af',1,'gpio.c']]],
+  ['gtim3_5fpwm_5finit_3',['GTIM3_PWM_Init',['../tim_8c.html#a50c9eed4d4dfa48b0316b19ace86f33b',1,'GTIM3_PWM_Init(void):&#160;tim.c'],['../tim_8h.html#a50c9eed4d4dfa48b0316b19ace86f33b',1,'GTIM3_PWM_Init(void):&#160;tim.c']]],
+  ['gui_5fdrawfont_5fgbk16_4',['Gui_DrawFont_GBK16',['../_g_u_i_8c.html#a7b3595536874c336cca1fc6a537d6265',1,'Gui_DrawFont_GBK16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, char *s):&#160;GUI.c'],['../_g_u_i_8h.html#a7b3595536874c336cca1fc6a537d6265',1,'Gui_DrawFont_GBK16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, char *s):&#160;GUI.c']]],
+  ['gui_5fdrawfont_5fnum16_5',['Gui_DrawFont_Num16',['../_g_u_i_8c.html#a7af36ce29c9231a0fb8c9128fbe6a959',1,'Gui_DrawFont_Num16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16_t num):&#160;GUI.c'],['../_g_u_i_8h.html#a7af36ce29c9231a0fb8c9128fbe6a959',1,'Gui_DrawFont_Num16(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16_t num):&#160;GUI.c']]],
+  ['gui_5fdrawfont_5fnum32_6',['Gui_DrawFont_Num32',['../_g_u_i_8c.html#a2219b183ca35d75c242b8af37c363bd1',1,'Gui_DrawFont_Num32(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16_t num):&#160;GUI.c'],['../_g_u_i_8h.html#a2219b183ca35d75c242b8af37c363bd1',1,'Gui_DrawFont_Num32(uint16_t x, uint16_t y, uint16_t fc, uint16_t bc, uint16_t num):&#160;GUI.c']]],
+  ['gui_5fdrawline_7',['Gui_DrawLine',['../_g_u_i_8c.html#affc1afcc41ebba3cc4bea672ade8cc91',1,'Gui_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t Color):&#160;GUI.c'],['../_g_u_i_8h.html#affc1afcc41ebba3cc4bea672ade8cc91',1,'Gui_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t Color):&#160;GUI.c']]],
+  ['gui_5fdrawpoint_8',['Gui_DrawPoint',['../_lcd___driver_8c.html#a24aba0149e152e0ce00249d360768402',1,'Gui_DrawPoint(uint16_t x, uint16_t y, uint16_t Data):&#160;Lcd_Driver.c'],['../_lcd___driver_8h.html#a24aba0149e152e0ce00249d360768402',1,'Gui_DrawPoint(uint16_t x, uint16_t y, uint16_t Data):&#160;Lcd_Driver.c']]]
+];
