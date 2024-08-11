@@ -4,5 +4,6 @@ var searchData=
   ['esp8266_5fclear_1',['ESP8266_Clear',['../esp8266__cmd_8c.html#a846bd3892ad76a2e0589298e6026a2eb',1,'ESP8266_Clear(void):&#160;esp8266_cmd.c'],['../esp8266__cmd_8h.html#a846bd3892ad76a2e0589298e6026a2eb',1,'ESP8266_Clear(void):&#160;esp8266_cmd.c']]],
   ['esp8266_5freset_2',['ESP8266_Reset',['../esp8266__cmd_8c.html#aa9414a328d6e95d451bd1f36f1923f01',1,'ESP8266_Reset(uint8_t echo):&#160;esp8266_cmd.c'],['../esp8266__cmd_8h.html#aa9414a328d6e95d451bd1f36f1923f01',1,'ESP8266_Reset(uint8_t echo):&#160;esp8266_cmd.c']]],
   ['esp8266_5fsendcmd_3',['ESP8266_SendCmd',['../esp8266__cmd_8c.html#a35a39c8502757158d77a6d0ee1936f03',1,'ESP8266_SendCmd(uint8_t *cmd, uint8_t *res):&#160;esp8266_cmd.c'],['../esp8266__cmd_8h.html#a35a39c8502757158d77a6d0ee1936f03',1,'ESP8266_SendCmd(uint8_t *cmd, uint8_t *res):&#160;esp8266_cmd.c']]],
-  ['esp8266_5fwaitrecive_4',['ESP8266_WaitRecive',['../esp8266__cmd_8c.html#a4929c68b4fd3f43141dd70f7a475a3da',1,'esp8266_cmd.c']]]
+  ['esp8266_5fsenddata_4',['ESP8266_SendData',['../esp8266__cmd_8h.html#a321c44bed0a4a78fe08b1c29f219eeaa',1,'esp8266_cmd.h']]],
+  ['esp8266_5fwaitrecive_5',['ESP8266_WaitRecive',['../esp8266__cmd_8c.html#a4929c68b4fd3f43141dd70f7a475a3da',1,'esp8266_cmd.c']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['lcd_5fbrightness_0',['lcd_brightness',['../_lcd___driver_8c.html#a8fb1173277237709877f9448dd731a09',1,'lcd_brightness:&#160;Lcd_Driver.c'],['../_lcd___driver_8h.html#a8fb1173277237709877f9448dd731a09',1,'lcd_brightness:&#160;Lcd_Driver.c']]],
-  ['logo_1',['logo',['../_picture_8c.html#a9980972e4cc8a8f46d5834ddf5666329',1,'logo:&#160;Picture.c'],['../_picture_8h.html#a9980972e4cc8a8f46d5834ddf5666329',1,'logo:&#160;Picture.c']]]
+  ['connect_5fretry_5fcnt_0',['connect_retry_cnt',['../esp8266__cmd_8c.html#ae8d48583d2afe8da67b66c3b11c47c6e',1,'esp8266_cmd.c']]],
+  ['current_5fnum_1',['current_num',['../va__meter_8c.html#af86bc4ee8d2fa5c183ce93bd5d5faeca',1,'va_meter.c']]],
+  ['current_5fvalue_2',['current_value',['../va__meter_8c.html#a4cb9ee35c1f0b3ec48b932d2aee073f4',1,'va_meter.c']]]
 ];
