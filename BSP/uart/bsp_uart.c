@@ -10,7 +10,11 @@
  * 2024-06-12     LCKFB-LP    first version
  */
 #include "bsp_uart.h"
+<<<<<<< HEAD
 #include <stdio.h>
+=======
+#include "stdio.h"
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #include "esp8266_cmd.h"
 
 /******************************************************************

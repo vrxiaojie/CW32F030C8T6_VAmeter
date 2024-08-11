@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * @file         esp8266_cmd.c
 * @brief		ESP8266相关操作源文件
@@ -8,6 +9,15 @@
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
 
+=======
+/*
+ * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
+ * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
+ *
+ *   Date           Author
+ * 2024-08-10     VRxiaojie
+ */
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #include "board.h"
 #include "Lcd_Driver.h"
 #include "GUI.h"
@@ -18,6 +28,7 @@
 #include "tim.h"
 
 //预定义变量
+<<<<<<< HEAD
 uint8_t esp8266_buf[1000],WIFI_Status=0,retry_cnt = 0,connect_retry_cnt = 0;
 uint16_t esp8266_cnt, esp8266_cntPre;
 //初始化ESP8266状态标识变量（ESP8266是否开机、是否连接到CW32）
@@ -32,6 +43,40 @@ uint8_t ESP8266_Last_Status = 0;
 * @return		无	
 */
 
+=======
+char buffer[300];
+uint8_t esp8266_buf[1000],WIFI_Status=0,retry_cnt = 0,connect_retry_cnt = 0;
+uint16_t esp8266_cnt, esp8266_cntPre;
+
+/**************************************************************************************
+	函数名称：	strcat_new
+
+	函数功能：	自定义的拼接字符串函数 用于显示在屏幕上
+
+	入口参数：	s1	-	待拼接的字符串1
+				s2	-	待拼接的字符串2
+
+	返回参数：	无
+**************************************************************************************/
+char* strcat_new(char* s1,char* s2)
+{
+    memset(buffer,0,300);
+    strcpy(buffer,s1);
+    strcat(buffer,s2);
+    return buffer;
+}
+
+/**************************************************************************************
+	函数名称：	USART_SendString
+
+	函数功能：	USART发送字符串
+
+	入口参数：	USARTx - UART引脚。可用的有：CW_UART1，CW_UART2，CW_UART3
+				DataString - 要发送的字符串数组
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void USART_SendString(UART_TypeDef* USARTx, uint8_t *DataString)
 {
     int i = 0;
@@ -45,12 +90,25 @@ void USART_SendString(UART_TypeDef* USARTx, uint8_t *DataString)
     }
 }
 
+<<<<<<< HEAD
 /**
 * @brief		清空ESP8266 UART接收缓存
 * @param		无
 * @return		无	
 */
 
+=======
+
+/**************************************************************************************
+	函数名称：	ESP8266_Clear
+
+	函数功能：	清空ESP8266 UART接收缓存
+
+	入口参数：	无
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void ESP8266_Clear(void)
 {
 
@@ -59,6 +117,7 @@ void ESP8266_Clear(void)
 
 }
 
+<<<<<<< HEAD
 /**
 * @brief		等待ESP8266接收完成
 * @param		无
@@ -66,6 +125,18 @@ void ESP8266_Clear(void)
 * @return		0 接收超时未完成
 */
 
+=======
+
+/**************************************************************************************
+	函数名称：	ESP8266_WaitRecive
+
+	函数功能：	等待接收完成
+
+	入口参数：	无
+
+	返回参数：	REV_OK-接收完成		REV_WAIT-接收超时未完成
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 uint8_t ESP8266_WaitRecive(void)
 {
 
@@ -85,6 +156,7 @@ uint8_t ESP8266_WaitRecive(void)
 
 }
 
+<<<<<<< HEAD
 /**
 * @brief		发送命令
 * @param		cmd 命令
@@ -93,6 +165,19 @@ uint8_t ESP8266_WaitRecive(void)
 * @return		0 失败
 */
 
+=======
+
+/**************************************************************************************
+	函数名称：	ESP8266_SendCmd
+
+	函数功能：	发送命令
+
+	入口参数：	cmd：命令
+				res：需要检查的返回指令
+
+	返回参数：	0-失败	1-成功
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 uint8_t ESP8266_SendCmd(uint8_t *cmd, uint8_t *res)
 {
 
@@ -115,11 +200,24 @@ uint8_t ESP8266_SendCmd(uint8_t *cmd, uint8_t *res)
     return 0;
 }
 
+<<<<<<< HEAD
 /**
 * @brief		查询网络信息
 * @param		无
 * @return		无
 */
+=======
+
+/**************************************************************************************
+	函数名称：	Network_info
+
+	函数功能：	查询网络信息
+
+	入口参数：	无
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 
 void Network_info() {
 	if(ESP8266_Status == 0)
@@ -187,6 +285,7 @@ void Network_info() {
         ESP8266_Clear();
     }
 }
+<<<<<<< HEAD
 
 /**
 * @brief		连接WIFI
@@ -194,6 +293,17 @@ void Network_info() {
 * @return		无
 */
 
+=======
+/**************************************************************************************
+	函数名称：	Connect_WIFI
+
+	函数功能：	连接WIFI
+
+	入口参数：	无
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Connect_WIFI() {
 	GPIO_WritePin(ESP8266_EN_PORT,ESP8266_EN_PIN,GPIO_Pin_SET); //开启ESP8266
 	delay_ms(100);
@@ -265,12 +375,25 @@ void Connect_WIFI() {
     }
 }
 
+<<<<<<< HEAD
 /**
 * @brief		断开WIFI
 * @param		无
 * @return		无
 */
 
+=======
+
+/**************************************************************************************
+	函数名称：	Disconnect_WIFI
+
+	函数功能：	断开WIFI
+
+	入口参数：	无
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Disconnect_WIFI()
 {
     if(WIFI_Status==1)
@@ -297,11 +420,14 @@ void Disconnect_WIFI()
     return ;
 }
 
+<<<<<<< HEAD
 /**
 * @brief		重置ESP8266
 * @param		echo 选择重置操作是否显示于屏幕 1-显示 0-不显示
 * @return		无
 */
+=======
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void ESP8266_Reset(uint8_t echo)
 {
 	if(ESP8266_Status == 0)

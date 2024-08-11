@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * @file         adc.c
 * @brief		配置模数转换相关操作的源文件
@@ -8,17 +9,38 @@
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
 
+=======
+/*
+ * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
+ * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
+ *
+ *   Date           Author
+ * 2024-08-10     VRxiaojie
+ */
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #include "adc.h"
 
 uint16_t adc_value[3]={0};
 double bat_volume=0;
 
+<<<<<<< HEAD
 /**
 * @brief		获取并显示电池电量
 * @param		无
 * @return		bat_volume 电池电量百分比	
 */
 
+=======
+/**************************************************************************************
+	函数名称：	Battery_Volume
+
+	函数功能：	获取并显示电池电量
+
+	入口参数：	无
+
+	返回参数：	电池电量百分比
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 uint16_t Battery_Volume(void)
 {
 	ADC_DeInit(); 	//测量前先将ADC去初始化，以免有其他ADC转换的结果干扰
@@ -74,12 +96,24 @@ uint16_t Battery_Volume(void)
 	
 }
 
+<<<<<<< HEAD
 /**
 * @brief		初始化电压电流表的ADC配置
 * @param		无
 * @return		无	
 */
 
+=======
+/**********************************************************
+ * 函 数 名 Init_VAmeter_ADC
+
+ * 函 数 功 能：初始化电压电流表的ADC配置
+
+ * 传 入 参 数：无
+
+ * 函 数 返 回：无
+**********************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Init_VAmeter_ADC(void)
 {
 	ADC_DeInit();
@@ -117,6 +151,7 @@ void Init_VAmeter_ADC(void)
     ADC_Enable();    // 使能ADC
 }
 
+<<<<<<< HEAD
 /**
 * @brief		ADC均值滤波
 * @param		times ADC获取值的次数
@@ -124,6 +159,18 @@ void Init_VAmeter_ADC(void)
 * @return		ADC_value ADC数值
 */
 
+=======
+/**************************************************************************************
+	函数名称：	Get_Adc_Average
+
+	函数功能：	ADC均值滤波
+
+	入口参数：	times——ADC获取值的次数
+				idx——ADC序列下标
+
+	返回参数：	ADC数值
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 double Get_Adc_Average(uint8_t times,uint8_t idx)
 {
     uint16_t value = 0;
@@ -155,11 +202,14 @@ double Get_Adc_Average(uint8_t times,uint8_t idx)
     return value/times/1.0;			   // 平均
 }
 
+<<<<<<< HEAD
 /**
 * @brief		读取一次ADC值
 * @param		无
 * @return		无
 */
+=======
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 /**********************************************************
  * 函 数 名 称：ADC_GET
  * 函 数 功 能：读取一次ADC值

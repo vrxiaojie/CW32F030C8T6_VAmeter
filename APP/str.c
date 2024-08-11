@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * @file         str.c
 * @brief		操作字符串的自定义函数源文件
@@ -10,10 +11,20 @@
 
 char buffer[300];
 
+=======
+/*
+ * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
+ * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
+ *
+ *   Date           Author
+ * 2024-08-10     VRxiaojie
+ */
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #include "str.h"
 
 static char table[]={'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
+<<<<<<< HEAD
 /**
 * @brief		浮点数转字符
 * @param		str 传入的数组
@@ -23,6 +34,20 @@ static char table[]={'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 * @return		无
 */
 
+=======
+/**************************************************************************************
+	函数名称：	num2char
+
+	函数功能：	浮点数转字符
+
+	入口参数：	str——传入的数组
+				number——数字
+				g——小数点前位数
+				l——小数点后位数
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void num2char(char *str, double number, uint8_t g,  uint8_t l)
 {
 	 uint8_t i;
@@ -47,6 +72,7 @@ void num2char(char *str, double number, uint8_t g,  uint8_t l)
 	}
 	//*(str+g+l+1) = '\0';
 }
+<<<<<<< HEAD
 
 /**
 * @brief		自定义的拼接字符串函数 用于显示在屏幕上
@@ -61,3 +87,5 @@ char* strcat_new(char* s1,char* s2)
     strcat(buffer,s2);
     return buffer;
 }
+=======
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952

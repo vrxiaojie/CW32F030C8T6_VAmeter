@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * @file         sht40.h
 * @brief		SHT40温湿度计的头文件
@@ -8,6 +9,15 @@
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
 
+=======
+/*
+ * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
+ * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
+ *
+ *   Date           Author
+ * 2024-08-10     VRxiaojie
+ */
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 #ifndef SHT40_H_
 #define SHT40_H_
 

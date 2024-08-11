@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * @file         Lcd_Driver.c
 * @brief		LCD屏幕驱动源文件
@@ -7,6 +8,16 @@
 * @note 	 	哔哩哔哩	:		VR小杰		https://space.bilibili.com/11526854 <br>
 * 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
 */
+=======
+/*
+ * 哔哩哔哩账号		: 	VR小杰      	https://space.bilibili.com/11526854
+ * 嘉立创开源广场	: 	vrxiaojie   https://oshwhub.com/vrxiaojie/
+ *
+ *   Date           Author
+ * 2024-08-10     VRxiaojie
+ */
+
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 /******************************************************************************
 TFT屏幕接线
               GND   电源地
@@ -16,6 +27,7 @@ TFT屏幕接线
               RES   接PA2
               DC    接PA1
               CS    接PA0
+<<<<<<< HEAD
 			  BL	接PC15
 *******************************************************************************/
 #include "board.h"
@@ -28,6 +40,25 @@ uint8_t lcd_brightness;   ///<LCD屏幕亮度
 * @param		无
 * @return		无	
 */
+=======
+				BL	  接PC15
+*******************************************************************************/
+#include "board.h"
+#include "Lcd_Driver.h"
+#include "LCD_Config.h"
+
+uint8_t lcd_brightness;
+
+/**************************************************************************************
+	函数名称：	LCD_GPIO_Init
+
+	函数功能：	初始化LCD屏幕的GPIO配置
+
+	入口参数：	无
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void LCD_GPIO_Init(void)
 {
 
@@ -48,12 +79,24 @@ void LCD_GPIO_Init(void)
     GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_Init(CW_GPIOC, &GPIO_InitStructure);
 }
+<<<<<<< HEAD
 
 /**
 * @brief		向SPI总线传输一个8位数数据
 * @param		Data 数据
 * @return		无	
 */
+=======
+/**************************************************************************************
+	函数名称：	SPI_WriteData
+
+	函数功能：	向SPI总线传输一个8位数据
+
+	入口参数：	Data	-	数据
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void  SPI_WriteData(uint8_t Data)
 {
     unsigned char i=0;
@@ -68,12 +111,24 @@ void  SPI_WriteData(uint8_t Data)
         Data<<=1;
     }
 }
+<<<<<<< HEAD
 
 /**
 * @brief		向液晶屏写一个8位指令
 * @param		Index 地址
 * @return		无	
 */
+=======
+/**************************************************************************************
+	函数名称：	Lcd_WriteIndex
+
+	函数功能：	向液晶屏写一个8位指令
+
+	入口参数：	Index	-	地址
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_WriteIndex(uint8_t Index)
 {
     //SPI 写命令时序开始
@@ -83,12 +138,24 @@ void Lcd_WriteIndex(uint8_t Index)
     LCD_CS_SET;
 }
 
+<<<<<<< HEAD
 /**
 * @brief		向液晶屏写一个8位数据
 * @param		Data 数据
 * @return		无	
 */
 
+=======
+/**************************************************************************************
+	函数名称：	Lcd_WriteData
+
+	函数功能：	向液晶屏写一个8位数据
+
+	入口参数：	Data	-	数据
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_WriteData(uint8_t Data)
 {
     LCD_CS_CLR;
@@ -97,12 +164,24 @@ void Lcd_WriteData(uint8_t Data)
     LCD_CS_SET;
 }
 
+<<<<<<< HEAD
 /**
 * @brief		向SPI总线传输一个16位数据
 * @param		Data 数据
 * @return		无	
 */
 
+=======
+/**************************************************************************************
+	函数名称：	LCD_WriteData_16Bit
+
+	函数功能：	向液晶屏写一个16位数据
+
+	入口参数：	Data	-	数据
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void LCD_WriteData_16Bit(uint16_t Data)
 {
     LCD_CS_CLR;
@@ -112,6 +191,7 @@ void LCD_WriteData_16Bit(uint16_t Data)
     LCD_CS_SET;
 }
 
+<<<<<<< HEAD
 /**
 * @brief		向液晶屏寄存器写数据
 * @param		Index 寄存器地址
@@ -119,17 +199,32 @@ void LCD_WriteData_16Bit(uint16_t Data)
 * @return		无	
 */
 
+=======
+/**************************************************************************************
+	函数名称：	Lcd_WriteReg
+
+	函数功能：	向液晶屏寄存器写数据
+
+	入口参数：	Index	-	寄存器地址
+				Data	-	数据
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_WriteReg(uint8_t Index,uint8_t Data)
 {
     Lcd_WriteIndex(Index);
     Lcd_WriteData(Data);
 }
 
+<<<<<<< HEAD
 /**
 * @brief		重置LCD屏幕
 * @param		无
 * @return		无	
 */
+=======
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_Reset(void)
 {
     LCD_RST_CLR;
@@ -138,12 +233,24 @@ void Lcd_Reset(void)
     delay_ms(50);
 }
 
+<<<<<<< HEAD
 /**
 * @brief		LCD屏幕初始化
 * @param		无
 * @return		无	
 */
 
+=======
+/**************************************************************************************
+	函数名称：	Lcd_Init
+
+	函数功能：	LCD屏幕初始化
+
+	入口参数：	无
+
+	返回参数：	无
+**************************************************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_Init(void)
 {
     LCD_GPIO_Init();
@@ -262,6 +369,7 @@ void Lcd_Init(void)
 }
 
 
+<<<<<<< HEAD
 /**
 * @brief		设置lcd显示区域，在此区域写点数据自动换行
 * @param		x_start 显示区域起点的x坐标
@@ -271,6 +379,20 @@ void Lcd_Init(void)
 * @return		无	
 */
 
+=======
+/*************************************************
+	函数名称：		LCD_Set_Region
+
+	函数功能：		设置lcd显示区域，在此区域写点数据自动换行
+
+	入口参数：		x_start		-	显示区域起点的x坐标
+					y_start		-	显示区域起点的y坐标
+					x_end		-	显示区域终点的x坐标
+					y_end		-	显示区域终点的y坐标
+
+	返回参数：		无
+*************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_SetRegion(uint16_t x_start,uint16_t y_start,uint16_t x_end,uint16_t y_end)
 {
     Lcd_WriteIndex(0x2a);
@@ -289,6 +411,7 @@ void Lcd_SetRegion(uint16_t x_start,uint16_t y_start,uint16_t x_end,uint16_t y_e
 
 }
 
+<<<<<<< HEAD
 
 /**
 * @brief		设置lcd显示起始点
@@ -297,12 +420,24 @@ void Lcd_SetRegion(uint16_t x_start,uint16_t y_start,uint16_t x_end,uint16_t y_e
 * @return		无	
 */
 
+=======
+/*************************************************
+	函数名称：		LCD_Set_XY
+
+	函数功能：		设置lcd显示起始点
+
+	入口参数：		x、y	-	该点的坐标(x,y)
+
+	返回参数：		无
+*************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_SetXY(uint16_t x,uint16_t y)
 {
     Lcd_SetRegion(x,y,x,y);
 }
 
 
+<<<<<<< HEAD
 /**
 * @brief		画一个点
 * @param		x 该点的横坐标
@@ -311,6 +446,18 @@ void Lcd_SetXY(uint16_t x,uint16_t y)
 * @return		无	
 */
 
+=======
+/*************************************************
+	函数名称：	LCD_DrawPoint
+
+	功能：		画一个点
+
+	入口参数：	x、y	-	该点的坐标(x,y)
+				Data	-	颜色值
+			
+	返回参数：无
+*************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Gui_DrawPoint(uint16_t x,uint16_t y,uint16_t Data)
 {
     Lcd_SetRegion(x,y,x+1,y+1);
@@ -318,6 +465,7 @@ void Gui_DrawPoint(uint16_t x,uint16_t y,uint16_t Data)
 
 }
 
+<<<<<<< HEAD
 /**
 * @brief		读TFT某一点的颜色
 * @param		x 该点的横坐标
@@ -327,6 +475,13 @@ void Gui_DrawPoint(uint16_t x,uint16_t y,uint16_t Data)
 */
 
 uint32_t Lcd_ReadPoint(uint16_t x,uint16_t y)
+=======
+/*****************************************
+	 函数功能：读TFT某一点的颜色
+	 出口参数：color  点颜色值
+******************************************/
+unsigned int Lcd_ReadPoint(uint16_t x,uint16_t y)
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 {
     unsigned int Data;
     Lcd_SetXY(x,y);
@@ -336,6 +491,7 @@ uint32_t Lcd_ReadPoint(uint16_t x,uint16_t y)
     Lcd_WriteData(Data);
     return Data;
 }
+<<<<<<< HEAD
 
 /**
 * @brief		全屏清屏函数
@@ -343,6 +499,14 @@ uint32_t Lcd_ReadPoint(uint16_t x,uint16_t y)
 * @return		无
 */
 
+=======
+/*************************************************
+函数名称：Lcd_Clear
+功能：全屏清屏函数
+入口参数：填充颜色COLOR
+返回参数：无
+*************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_Clear(uint16_t Color)
 {
     unsigned int i,m;
@@ -355,6 +519,7 @@ void Lcd_Clear(uint16_t Color)
         }
 }
 
+<<<<<<< HEAD
 /**
 * @brief		部分区域清屏函数
 * @param		Color 填充的颜色
@@ -365,6 +530,14 @@ void Lcd_Clear(uint16_t Color)
 * @return		无
 */
 
+=======
+/*************************************************
+函数名称：Lcd_Part_Clear
+功能：部分区域清屏函数
+入口参数：左上角顶点x坐标、y坐标，右下角顶点x坐标、y坐标，填充颜色COLOR
+返回参数：无
+*************************************************/
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Lcd_Part_Clear(uint8_t x1,uint8_t y1,uint8_t x2,uint8_t y2,uint16_t Color)
 {
 	uint8_t i,j;
@@ -377,12 +550,15 @@ void Lcd_Part_Clear(uint8_t x1,uint8_t y1,uint8_t x2,uint8_t y2,uint16_t Color)
         }
 }
 
+<<<<<<< HEAD
 /**
 * @brief		设置LCD屏幕的亮度
 * @param		light 亮度值 0-100
 * @return		无
 * @note			使用PWM调光
 */
+=======
+>>>>>>> 0dfd7a7e8c0db99ec07f30fe2edd2e84eaf20952
 void Set_Lcd_Brightness(uint8_t light)	
 {
 	GTIM_SetCompare2(CW_GTIM3, 100-light);
