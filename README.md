@@ -1,38 +1,3 @@
-<span style="font-size:26px;font-family:Microsoft YaHei">目录</span>
-- [1 简介](#1-简介)
-- [2 硬件设计及原理](#2-硬件设计及原理)
-	- [2.1 供电电路](#21-供电电路)
-	- [2.2 MCU选型——为什么选CW32](#22-mcu选型为什么选cw32)
-	- [2.3 ADC电路](#23-adc电路)
-		- [2.3.1电压采样电路](#231电压采样电路)
-		- [2.3.2 电流采样电路](#232-电流采样电路)
-		- [2.3.3 电池电压采样](#233-电池电压采样)
-		- [2.3.4 TL431电压校准电路(可选)](#234-tl431电压校准电路可选)
-	- [2.4 按键电路](#24-按键电路)
-	- [2.5 ESP8266电路](#25-esp8266电路)
-	- [2.6 TFT屏幕](#26-tft屏幕)
-	- [2.7 SHT40温湿度采集（可选）](#27-sht40温湿度采集可选)
-- [3 软件设计](#3-软件设计)
-	- [3.1 简介](#31-简介)
-	- [3.2 菜单设计](#32-菜单设计)
-	- [3.3 WIFI连接\&MQTT连接](#33-wifi连接mqtt连接)
-	- [3.4 电压电流表](#34-电压电流表)
-	- [3.5 中断、按键、计时器](#35-中断按键计时器)
-- [4 使用手册](#4-使用手册)
-- [4.1 PCB焊接](#41-pcb焊接)
-	- [4.2 安装配置Keil \& CW32程序下载](#42-安装配置keil--cw32程序下载)
-		- [4.2.1 Keil下载安装](#421-keil下载安装)
-		- [4.2.2 器件包安装](#422-器件包安装)
-		- [4.2.3 CW32程序下载](#423-cw32程序下载)
-	- [4.3 下载ESP8266的MQTT AT固件](#43-下载esp8266的mqtt-at固件)
-	- [4.4 自建InfluxDB数据库](#44-自建influxdb数据库)
-	- [4.5 自建MQTT服务器-EMQX](#45-自建mqtt服务器-emqx)
-	- [4.6使用python程序接收并转发数据至数据库](#46使用python程序接收并转发数据至数据库)
-	- [4.7 Grafana数据监控仪表盘](#47-grafana数据监控仪表盘)
-- [5 外壳组装](#5-外壳组装)
-- [6 开源协议](#6-开源协议)
-- [7 演示视频](#7-演示视频)
-
 
 <span style="font-size:20px;font-family:Microsoft YaHei">
     
@@ -263,6 +228,8 @@ $$
 
 ## 3.1 简介
 &ensp;&ensp;OK,终于来到软件代码部分了.这里有95%以上的核心实现代码是我自己一点点编写起来的，也是第一次自己做了一个操作菜单，其中的逻辑关系还是比较复杂的.编写工程代码前后用时将近7天.
+
+程序API文档可在线查看：[基于CW32的电压电流表-DOC](https://wjj0227.github.io/CW32F030C8T6_VAmeter/files.html)
 
 &ensp;&ensp;代码主要部分包括
 - 菜单设计
@@ -1198,10 +1165,21 @@ docker-mirror.vrxiaojie.top/grafana/grafana:11.0.0
 	<p align="center">图42 底部视图</p>
 </body>
 
-# 6 开源协议
+# 6 链接
+本项目工程开源在开源广场：https://oshwhub.com/vrxiaojie/voltage-and-ammeter-based-on-lic
+
+软件代码开源于Github：https://github.com/wjj0227/CW32F030C8T6_VAmeter
+
+软件API文档：https://wjj0227.github.io/CW32F030C8T6_VAmeter/files.html
+
+B站：https://space.bilibili.com/11526854
+
+个人Blog：https://blog.vrxiaojie.top/
+
+# 7 开源协议
 GPL 3.0
 
-# 7 演示视频
+# 8 演示视频
 高清版见B站： [多功能物联网电压电流表 基于立创地文星开发板CW32 ESP8266](https://www.bilibili.com/video/BV1WhYxeWEEA)
 
 </span>
