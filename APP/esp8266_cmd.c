@@ -18,14 +18,11 @@
 #include "tim.h"
 
 //预定义变量
-uint8_t esp8266_buf[1000];  ///<ESP8266接收数据临时存储数组
-uint8_t WIFI_Status=0;   ///<WIFI状态，0为未连接，1为已连接
-uint8_t retry_cnt = 0;   ///<查询网络信息重试次数
-uint8_t connect_retry_cnt = 0;  ///<WIFI连接重试次数
+uint8_t esp8266_buf[1000],WIFI_Status=0,retry_cnt = 0,connect_retry_cnt = 0;
 uint16_t esp8266_cnt, esp8266_cntPre;
 //初始化ESP8266状态标识变量（ESP8266是否开机、是否连接到CW32）
-uint8_t ESP8266_Status = 0;  ///<ESP8266状态，0为未连接，1为已连接
-uint8_t ESP8266_Last_Status = 0;   
+uint8_t ESP8266_Status = 0;
+uint8_t ESP8266_Last_Status = 0;
 
 
 /**
@@ -100,7 +97,7 @@ uint8_t ESP8266_SendCmd(uint8_t *cmd, uint8_t *res)
 {
 
     uint16_t timeOut = 3000;
-
+	ESP8266_Clear();
     USART_SendString(CW_UART1, (uint8_t *)cmd);
 
     while(timeOut--)
@@ -109,6 +106,7 @@ uint8_t ESP8266_SendCmd(uint8_t *cmd, uint8_t *res)
         {
             if(strstr((const char *)esp8266_buf,(const char *)res) != NULL)		//如果检索到关键词
             {
+				ESP8266_Clear();
                 return 1;
             }
         }

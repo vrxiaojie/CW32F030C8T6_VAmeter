@@ -5,7 +5,7 @@
 * @date		    2024-08-11
 * @version	    v1.0
 * @note 	 	哔哩哔哩	:		VR小杰		https://space.bilibili.com/11526854 <br>
-* 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/	
+* 				嘉立创开源广场:	vrxiaojie	https://oshwhub.com/vrxiaojie/
 */
 
 #include "va_meter.h"
@@ -37,23 +37,23 @@ void Draw_Value_Line()
     }
 
     voltage_value=(int)voltage_value/10;
-	current_value=(int)current_value/10;
+    current_value=(int)current_value/10;
     //画图范围纵坐标20-110，横坐标2-158
     if(voltage_value>MAX_VOLTAGE_Y*10 || current_value>MAX_CURRENT_Y)
         return ;
-	
-	//先绘制电流柱状图，如果和电压曲线图颠倒绘制顺序，则会遮住曲线图
-	Gui_DrawLine(time,110-(int)(90*current_value/MAX_CURRENT_Y),time,110,BLUE);
-	
-	//再绘制电压曲线图
+
+    //先绘制电流柱状图，如果和电压曲线图颠倒绘制顺序，则会遮住曲线图
+    Gui_DrawLine(time,110-(int)(90*current_value/MAX_CURRENT_Y),time,110,BLUE);
+
+    //再绘制电压曲线图
     if(time==2)
-	{
-        Gui_DrawPoint(time,110-(int)(90*voltage_value/10/MAX_VOLTAGE_Y),GREEN); 
-	}
+    {
+        Gui_DrawPoint(time,110-(int)(90*voltage_value/10/MAX_VOLTAGE_Y),GREEN);
+    }
     else
     {
         Gui_DrawLine(last_time,110-(int)(90*last_voltage_value/10/MAX_VOLTAGE_Y),time,110-(int)(90*voltage_value/10/MAX_VOLTAGE_Y),GREEN); 	//voltage
-	}
+    }
 
     Gui_DrawLine(time+1,20,time+1,110,BLACK); //擦除下一时刻的值
     time++;
@@ -71,9 +71,9 @@ void Launch_VA_Meter(uint8_t idx)
 {
     Lcd_Clear(BLACK);
     Init_VAmeter_ADC();
-	key_flag[2]=0;
-	uint8_t send_wait = 100;
-	double mqtt_volt,mqtt_curr;
+    key_flag[2]=0;
+    uint8_t send_wait = 0;
+    double mqtt_volt,mqtt_curr;
     //初始化不同样式的界面
     switch(idx)
     {
@@ -98,61 +98,61 @@ void Launch_VA_Meter(uint8_t idx)
     while(key_flag[2]==0)  //向左按键未被按下，一直在循环内
     {
         ADC_GET();
-		
-		//处理电压数据
-		if(adc_value[0]>=4090)  //当电压值大于3V时，换挡到0~31V
-		{
-			voltage_value = (adc_value[1]/4095.0 * 1.5 * 21)-0.075;   //参考电压是1.5V，分压比1:20 经校准比正常值高0.075V，故减去0.075
-			Gui_DrawFont_GBK16(128,0,RED,BLACK,"3V");
-		}
-		else	//电压值小于3V时，换挡到0~3V
-		{
-			voltage_value = (adc_value[0]/4095.0 * 1.5 * 2);	//参考电压是1.5V，分压比1:1 
-			Gui_DrawFont_GBK16(128,0,GREEN,BLACK,"3V");
-		}
-		mqtt_volt = voltage_value;
+
+        //处理电压数据
+        if(adc_value[0]>=4090)  //当电压值大于3V时，换挡到0~31V
+        {
+            voltage_value = (adc_value[1]/4095.0 * 1.5 * 21)-0.075;   //参考电压是1.5V，分压比1:20 经校准比正常值高0.075V，故减去0.075
+            Gui_DrawFont_GBK16(128,0,RED,BLACK,"3V");
+        }
+        else	//电压值小于3V时，换挡到0~3V
+        {
+            voltage_value = (adc_value[0]/4095.0 * 1.5 * 2);	//参考电压是1.5V，分压比1:1
+            Gui_DrawFont_GBK16(128,0,GREEN,BLACK,"3V");
+        }
+        mqtt_volt = voltage_value;
         voltage_value *= 100;	//处理以显示小数点后2位
         for(uint8_t i = 0; i<4; i++)
             voltage_num[3-i]=(int)(voltage_value/(pow(10,i))) %10;
-		
-		//处理电流数据
+
+        //处理电流数据
         current_value = ((adc_value[2]/4095.0 * 1.5)/0.2 * 1000)-10.8;   //参考电压是1.5V，采样电阻0.2ohm，电流单位mA，经校准比理论值高10.8mA
-		if(current_value < 0 || current_value > 7000) //未采集到正确数据	
-			current_value = 0;
-		mqtt_curr = current_value;
-		current_value *= 10;  	//处理以显示小数点后1位
-		for(uint8_t i = 0; i<4; i++)
+        if(current_value > 7000 || current_value <=1) //未采集到正确数据或是误差
+            current_value = 0;
+        mqtt_curr = current_value;
+        current_value *= 10;  	//处理以显示小数点后1位
+        for(uint8_t i = 0; i<4; i++)
             current_num[3-i]=(int)(current_value/(pow(10,i))) %10;
-		//MQTT发送间隔  4-->-约等于0.3s
-		send_wait++;
-		if(send_wait>4)
-		{
-			VAmeter_Mqtt_Send_Data(mqtt_volt,mqtt_curr);
-			send_wait=0;
-		}
-		
+        //MQTT发送间隔  4-->-约等于0.3s
+        send_wait++;
+        if(send_wait>4)
+        {
+            VAmeter_Mqtt_Send_Data(mqtt_volt,mqtt_curr);
+            send_wait=0;
+        }
+
         switch(va_meter_style)
         {
         case 0:
             for(uint8_t i = 0; i<2; i++)
-			{
+            {
                 Gui_DrawFont_Num16(i*8,112,GREEN,BLACK,voltage_num[i]);
-			}
+            }
             Gui_DrawFont_GBK16(16,112,ORANGE,BLACK,".");
             for(uint8_t i = 2; i<4; i++)
             {
                 Gui_DrawFont_Num16(8+i*8,112,GREEN,BLACK,voltage_num[i]);
             }
             Gui_DrawFont_GBK16(40,112,ORANGE,BLACK,"V");
-			
-			for(uint8_t i = 0; i<3; i++)
+
+            for(uint8_t i = 0; i<3; i++)
             {
                 Gui_DrawFont_Num16(60+i*8,112,BLUE,BLACK,current_num[i]);
             }
-			Gui_DrawFont_GBK16(84,112,ORANGE,BLACK,".");
+            Gui_DrawFont_GBK16(84,112,ORANGE,BLACK,".");
             Gui_DrawFont_Num16(92,112,BLUE,BLACK,current_num[3]);
-			Gui_DrawFont_GBK16(100,112,ORANGE,BLACK,"mA");
-			
+            Gui_DrawFont_GBK16(100,112,ORANGE,BLACK,"mA");
+
             Draw_Value_Line();
             break;
         case 1:
@@ -173,10 +173,10 @@ void Launch_VA_Meter(uint8_t idx)
         }
         delay_ms(5);
     }
-	Lcd_Clear(BLACK);
-	Show_Main_Menu();
-	in_progress_flag = 0;
-	key_flag[2]=0;
+    Lcd_Clear(BLACK);
+    Show_Main_Menu();
+    in_progress_flag = 0;
+    key_flag[2]=0;
 }
 
 /**
@@ -188,26 +188,26 @@ void Launch_VA_Meter(uint8_t idx)
 
 void VAmeter_Mqtt_Send_Data(double volt,double curr)
 {
-	if(mqtt_status == 0)
-		return ;
-	double pwr = volt*curr;
-	char *data = malloc(150);
-	char t[10] = {0};
-	strcpy(data,"{\\\"volt\\\":");
-	num2char(t,volt,log10(volt)+1,2);
-	strcat(data,t);
-	memset(t,0,10);
-	strcat(data,"\\,\\\"curr\\\":");
-	num2char(t,curr,log10(curr)+1,1);
-	strcat(data,t);
-	memset(t,0,10);
-	
-	strcat(data,"\\,\\\"pwr\\\":");
-	num2char(t,pwr,log10(pwr)+1,1);
-	strcat(data,t);
-	free(t);
-	
-	strcat(data,"}");
-	MQTT_Publish(data);
-	free(data);
+    if(mqtt_status == 0)
+        return ;
+    double pwr = volt*curr;
+    char *data1 = malloc(300);
+    char *t = malloc(10);
+    strcpy(data1,"{\\\"volt\\\":");
+    num2char(t,volt,log10(volt)+1,2);
+    strcat(data1,t);
+    memset(t,0,10);
+    strcat(data1,"\\,\\\"curr\\\":");
+    num2char(t,curr,log10(curr)+1,1);
+    strcat(data1,t);
+    memset(t,0,10);
+
+    strcat(data1,"\\,\\\"pwr\\\":");
+    num2char(t,pwr,log10(pwr)+1,1);
+    strcat(data1,t);
+    free(t);
+
+    strcat(data1,"}");
+    MQTT_Publish(data1);
+    free(data1);
 }

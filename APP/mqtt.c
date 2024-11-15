@@ -54,8 +54,11 @@ void MQTT_Setup()
             Gui_DrawFont_GBK16(0,48,GREEN,BLACK,"MQTT Connected");
         else
         {
-            Gui_DrawFont_GBK16(0,48,RED,BLACK,"Err:Connection");
+            Gui_DrawFont_GBK16(0,48,RED,BLACK,"连接失败,检查用户名");
+			Gui_DrawFont_GBK16(0,64,RED,BLACK,"或密码或服务器ip");
+			Gui_DrawFont_GBK16(0,80,RED,BLACK,"和端口是否准确");
             t=0;
+			delay_ms(1000);
         }
         delay_ms(100);
       
@@ -104,13 +107,13 @@ void MQTT_Publish(char *data)
 {
 	if(mqtt_status==1)
 	{
-		char buffer[400] = {0};
-		strcpy(buffer,"AT+MQTTPUB=0,\"");
-		strcat(buffer,MQTT_TOPIC);
-		strcat(buffer,"\",\"");
-		strcat(buffer,data);
-		strcat(buffer,"\",0,0\r\n");
-		ESP8266_SendCmd((uint8_t*)buffer,(uint8_t*)"OK");
-		free(buffer);
+		char buffer1[400] = {0};
+		strcpy(buffer1,"AT+MQTTPUB=0,\"");
+		strcat(buffer1,MQTT_TOPIC);
+		strcat(buffer1,"\",\"");
+		strcat(buffer1,data);
+		strcat(buffer1,"\",0,0\r\n");
+		ESP8266_SendCmd((uint8_t*)buffer1,(uint8_t*)"OK");
+		free(buffer1);
 	}
 }

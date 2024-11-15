@@ -19,10 +19,10 @@
 	#include <stdlib.h>
 
 	/*注意CLIENTID当中的逗号，除了第一个之外，其他的逗号前都要加两个反斜杠 \\  转义*/
-	#define USERCFG "AT+MQTTUSERCFG=0,1,\"NULL\",\"username\",\"password\",0,0,\"\""  ///<设置MQTT用户名和密码
-	#define CLIENTID "AT+MQTTCLIENTID=0,\"ClientID\""  ///<配置ClientID
-	#define MQTTCONN "AT+MQTTCONN=0,\"MQTTHost\",Port,1"  ///<配置MQTT服务器地址MQTTHost与端口Port
-	#define MQTT_TOPIC "TOPIC"  ///<配置要发布消息的TOPIC
+	#define USERCFG "AT+MQTTUSERCFG=0,1,\"NULL\",\"(修改)用户名\",\"(修改)密码\",0,0,\"\""  ///<设置MQTT用户名和密码
+	#define CLIENTID "AT+MQTTCLIENTID=0,\"(修改)ClientID\""  ///<配置ClientID
+	#define MQTTCONN "AT+MQTTCONN=0,\"(修改)address\",(修改)端口号,1"  ///<配置MQTT服务器地址MQTTHost与端口Port
+	#define MQTT_TOPIC "(修改)TOPIC"  ///<配置要发布消息的TOPIC
 
 	void MQTT_Setup(void);
 	void MQTT_Disconnect(void);
